@@ -1,6 +1,12 @@
-# CaseGen
+# <p align="center"> CaseGen </p>
 
-A local tool for generating business challenges and practicing problem-solving.
+<p align="center">
+  <img src="./assets/logo.png" width="120" />
+</p>
+<p align="center">
+  A local tool for generating business case challenges and writing possible solutions.
+</p>
+
 
 ### Concept
 
