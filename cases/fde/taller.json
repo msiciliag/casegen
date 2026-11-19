@@ -1,0 +1,10 @@
+{
+  "track": "fde",
+  "title": "Una alerta que sobrevive al turno de noche",
+  "setting": "Operaciones · Fábrica de envases",
+  "brief": "Dos líneas de envasado paran por atascos. Un sensor manda pulsos incluso cuando mantenimiento está limpiando la máquina. El director quiere avisos al móvil en diez días. Solo puedes leer las señales. El jefe de turno amenaza con silenciar el canal si vuelve a despertarlo durante una limpieza.",
+  "question": "¿Qué activarías primero, quién decidiría qué es un atasco y cuándo apagarías el piloto?",
+  "decision": "Durante dos turnos registrar avisos en silencio y cotejarlos con las anotaciones del operario. Probar en una línea, suprimir ventanas de limpieza acordadas y asignar un único responsable para aceptar la alerta.",
+  "outcome": "Medir atascos detectados a tiempo y avisos inútiles por turno. Una línea con menos alarmas pero más atascos sin detectar sería motivo para volver al modo silencioso.",
+  "sources": {}
+}

@@ -1,0 +1,14 @@
+{
+  "title": "¿Qué le debes a quien compró un juego?",
+  "setting": "Continuidad de producto · Google Stadia · septiembre de 2022",
+  "brief": "Diriges un servicio de videojuegos en la nube. Los clientes han comprado juegos y mandos, y necesitan tus servidores para jugar a su biblioteca. Stadia ha dejado de invertir en producir juegos propios y ha explorado ofrecer su tecnología a otros editores. La adopción entre jugadores está por debajo de las expectativas de Google. Seguir operando exige recursos. Retirarte traslada parte del coste a quienes confiaron en el servicio.",
+  "question": "¿Financiarías otro año de Stadia? Defiende tu decisión ante dirección y explica a una persona que acaba de comprar un juego qué pasará con su compra.",
+  "decision": "Google anunció en septiembre de 2022 que retiraría el servicio de consumo. Mantuvo el acceso hasta el 18 de enero de 2023 y ofreció devolver el importe de los juegos y complementos comprados en Stadia Store y del hardware Stadia adquirido en Google Store.",
+  "outcome": "Los pagos empezaron a devolverse en noviembre. Las cuotas anteriores de Stadia Pro quedaron fuera del reembolso general. Tras el cierre, Google ofreció un modo Bluetooth para seguir usando el mando con dispositivos compatibles. El problema de conservar cada partida dependía también del editor del juego.",
+  "sources": {
+    "Google · Cambio de estrategia en 2021": "https://blog.google/products-and-platforms/products/stadia/focusing-on-stadias-future-as-a-platform-and-winding-down-sge/",
+    "Google · Decisión de septiembre de 2022": "https://blog.google/products-and-platforms/products/stadia/message-on-stadia-streaming-strategy/",
+    "Google · Reembolsos y partidas": "https://support.google.com/stadia/answer/12790109",
+    "Google · Uso del mando tras el cierre": "https://support.google.com/stadia/answer/13067284"
+  }
+}

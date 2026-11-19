@@ -11,7 +11,7 @@ def HistoryView(page: ft.Page):
 
         if not records:
             history_list.controls.append(
-                ft.Text("No history found. Go generate some challenges!", size=18, color=ft.colors.BLACK)
+                ft.Text("Aquí aparecerán tus propuestas guardadas.", size=18, color=ft.colors.BLACK)
             )
             return
 
@@ -26,7 +26,7 @@ def HistoryView(page: ft.Page):
             page.update()
 
         del_btn = ft.Container(
-            content=ft.Text("DELETE", weight=ft.FontWeight.W_900, size=12, color=ft.colors.BLACK),
+            content=ft.Text("Borrar", weight=ft.FontWeight.W_900, size=12, color=ft.colors.BLACK),
             bgcolor="#ff90e8",
             padding=ft.padding.symmetric(horizontal=15, vertical=5),
             border=ft.border.all(2, ft.colors.BLACK),
@@ -39,14 +39,14 @@ def HistoryView(page: ft.Page):
         return ft.Container(
             content=ft.Column([
                 ft.Row([
-                    ft.Text(f"Case #{record['id']} - {record['timestamp']}", weight=ft.FontWeight.W_900, size=18, color=ft.colors.BLACK),
+                    ft.Text(f"Intento {record['id']} - {record['timestamp']}", weight=ft.FontWeight.W_900, size=18, color=ft.colors.BLACK),
                     del_btn
                 ], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
                 ft.Divider(color=ft.colors.BLACK, thickness=2),
-                ft.Text("CHALLENGE:", weight=ft.FontWeight.BOLD, color=ft.colors.BLACK),
+                ft.Text("Caso", weight=ft.FontWeight.BOLD, color=ft.colors.BLACK),
                 ft.Text(record['challenge'], color=ft.colors.BLACK, size=14, selectable=True),
                 ft.Container(height=10),
-                ft.Text("YOUR SOLUTION:", weight=ft.FontWeight.BOLD, color=ft.colors.BLACK),
+                ft.Text("Tu propuesta", weight=ft.FontWeight.BOLD, color=ft.colors.BLACK),
                 ft.Text(record['solution'], color=ft.colors.BLACK, size=14, selectable=True),
             ]),
             bgcolor=ft.colors.WHITE,
@@ -59,7 +59,7 @@ def HistoryView(page: ft.Page):
     load_history()
 
     return ft.Column([
-        ft.Text("History", size=32, weight=ft.FontWeight.W_900, color=ft.colors.BLACK),
+        ft.Text("Historial", size=32, weight=ft.FontWeight.W_900, color=ft.colors.BLACK),
         ft.Container(height=20),
         history_list
     ], expand=True)

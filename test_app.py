@@ -1,70 +1,51 @@
-import os
+import asyncio
+from unittest.mock import Mock
+
 import pytest
-from unittest.mock import patch, MagicMock
 
-import tempfile
 import db
-import ai
+from main import main
+from views.home import CASES
 
-@pytest.fixture(autouse=True)
-def setup_db():
-    # Use a temporary file for the DB
-    temp_db = tempfile.NamedTemporaryFile(delete=False)
-    temp_db.close()
 
-    db.DB_PATH = temp_db.name
-    db.init_db()
-    yield
+@pytest.fixture
+def page(tmp_path, monkeypatch):
+    monkeypatch.setattr(db, "DB_PATH", tmp_path / "history.db")
+    page = Mock(route="/", views=[])
 
-    # Cleanup
-    os.unlink(temp_db.name)
+    def navigate(route):
+        page.route = route
+        page.on_route_change(None)
 
-def test_db_settings():
-    db.set_api_key('test_key_123')
-    assert db.get_api_key() == 'test_key_123'
+    page.go.side_effect = navigate
+    main(page)
+    return page
 
-    db.set_api_key('new_key_456')
-    assert db.get_api_key() == 'new_key_456'
 
-def test_db_history():
-    assert len(db.get_history()) == 0
+@pytest.mark.parametrize("key", CASES)
+def test_library_to_reveal_and_history(page, key):
+    case = CASES[key]
+    library = page.views[-1].controls[-1].content
+    button = next(c for c in library.controls if getattr(c, "text", None) == case["title"])
+    button.on_click(None)
+    view = page.views[-1].controls[-1].content
+    answer, submit, result = view.controls[-3:]
+    asyncio.run(submit.on_click(None))
+    assert answer.error_text and not result.controls and not db.get_history()
 
-    db.add_history("Challenge 1", "Solution 1")
-    history = db.get_history()
+    answer.value = "Probaría en un mercado primero."
+    asyncio.run(submit.on_click(None))
+    asyncio.run(submit.on_click(None))
+    assert case["decision"] in [getattr(c, "value", None) for c in result.controls]
+    assert case["outcome"] in [getattr(c, "value", None) for c in result.controls]
+    assert {c.url for c in result.controls if getattr(c, "url", None)} == set(case["sources"].values())
+    record, = db.get_history()
+    assert record["solution"] == answer.value
+    assert case["title"] in record["challenge"]
 
-    assert len(history) == 1
-    assert history[0]['challenge'] == "Challenge 1"
-    assert history[0]['solution'] == "Solution 1"
-
-    db.add_history("Challenge 2", "Solution 2")
-    history = db.get_history()
-    assert len(history) == 2
-
-    # Delete the first one
-    db.delete_history(history[0]['id'])
-    history_after_delete = db.get_history()
-    assert len(history_after_delete) == 1
-
-@patch('ai.genai.GenerativeModel')
-@patch('ai.genai.configure')
-def test_generate_challenge(mock_configure, mock_model_class):
-    # Setup mock
-    mock_model_instance = MagicMock()
-    mock_response = MagicMock()
-    mock_response.text = "Mocked Challenge Text"
-    mock_model_instance.generate_content.return_value = mock_response
-    mock_model_class.return_value = mock_model_instance
-
-    # Call function
-    api_key = "fake_api_key"
-    result = ai.generate_challenge(api_key)
-
-    # Assertions
-    mock_configure.assert_called_once_with(api_key=api_key)
-    mock_model_class.assert_called_once_with('gemini-1.5-flash')
-    mock_model_instance.generate_content.assert_called_once()
-    assert result == "Mocked Challenge Text"
-
-def test_generate_challenge_no_key():
-    with pytest.raises(ValueError, match="API Key is missing."):
-        ai.generate_challenge("")
+    page.go("/history")
+    history = page.views[-1].controls[-1].content
+    card, = history.controls[-1].controls
+    assert card.content.controls[-1].value == answer.value
+    db.delete_history(record["id"])
+    assert not db.get_history()

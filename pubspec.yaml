@@ -1,0 +1,21 @@
+name: casegen
+description: Decisiones empresariales reales para practicar en el móvil.
+publish_to: none
+version: 0.1.0+1
+environment:
+  sdk: ^3.11.0
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_secure_storage: ^11.2.0
+  sqflite: ^2.4.2
+  url_launcher: ^6.3.2
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/logo.png
+    - cases/
+    - cases/fde/

@@ -1,0 +1,10 @@
+{
+  "track": "fde",
+  "title": "El inventario que cambia de unidad",
+  "setting": "Integración · Cooperativa agrícola",
+  "brief": "Seis almacenes declaran fruta en cajas, kilos o palés. Una caja cambia de peso según variedad y proveedor. El lunes se negocian pedidos con supermercados. La gerente pide existencias consolidadas y solo puedes hablar con dos encargados antes de la reunión.",
+  "question": "¿Qué cifra te atreverías a presentar el lunes? Explica de dónde sale, qué queda fuera y cómo evitarías comprometer mercancía inexistente.",
+  "decision": "Elegir una variedad y los dos almacenes accesibles. Conciliar el último recuento físico con movimientos posteriores. Convertir únicamente lotes con peso conocido y mostrar aparte cantidades pendientes con su unidad original.",
+  "outcome": "Contrastar dos pedidos con lo que expedición pudo preparar. Una cifra parcial con cobertura identificada permite vender con un límite explícito y pedir el dato concreto que falta al resto de almacenes.",
+  "sources": {}
+}

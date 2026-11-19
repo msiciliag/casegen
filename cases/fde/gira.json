@@ -1,0 +1,10 @@
+{
+  "track": "fde",
+  "title": "Taquilla sin cobertura a las ocho",
+  "setting": "Trabajo sin conexión · Festival itinerante",
+  "brief": "Se abren dos puertas para 1.200 asistentes. El recinto pierde cobertura y los lectores solo tienen batería para tres horas. La organización te ofrece cuatro móviles, un listado de entradas y una prueba de media hora. Un mismo QR podría presentarse en ambas puertas.",
+  "question": "¿Cómo organizarías el acceso esta noche y qué riesgo residual explicarías al promotor antes de abrir?",
+  "decision": "Descargar listas mínimas y repartir entradas entre puertas por un criterio visible. Registrar cada acceso en el dispositivo asignado y enviar excepciones a una mesa con una lista única. Ensayar pérdida de red y sustitución de un lector.",
+  "outcome": "Registrar espera y excepciones durante la primera oleada. Si se intercambian lectores sin transferir su registro, volver al control manual de esa puerta hasta conciliarlo.",
+  "sources": {}
+}

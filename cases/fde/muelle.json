@@ -1,0 +1,10 @@
+{
+  "track": "fde",
+  "title": "El camión llega antes que el dato",
+  "setting": "Logística · Operador portuario",
+  "brief": "A las seis abren ocho muelles. El turno de noche imprime citas de un ERP que exporta un CSV cada media hora. Tres transportistas comparten matrícula y a veces cambia la cabeza tractora. La jefa de patio pide predicción de colas para el viernes. Tienes dos jornadas con un despachador y acceso de lectura al ERP.",
+  "question": "¿Qué pondrías en manos del despachador el viernes? Explica cómo identificarías una cita dudosa, qué dejarías manual y cómo sabrías si baja la espera.",
+  "decision": "Acompañar un turno y medir tiempos desde la llegada hasta la asignación. Pilotar en un muelle una lista de citas con hora de actualización, identificador de reserva y confirmación humana para coincidencias ambiguas. Conservar la hoja impresa como respaldo.",
+  "outcome": "Comparar esperas por franja y número de camiones atendidos. Si disminuye la espera del piloto pero aumenta en los otros siete muelles, revisar la asignación antes de ampliar.",
+  "sources": {}
+}
