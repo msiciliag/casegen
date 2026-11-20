@@ -6,5 +6,18 @@
   "question": "¿Qué cifra te atreverías a presentar el lunes? Explica de dónde sale, qué queda fuera y cómo evitarías comprometer mercancía inexistente.",
   "decision": "Elegir una variedad y los dos almacenes accesibles. Conciliar el último recuento físico con movimientos posteriores. Convertir únicamente lotes con peso conocido y mostrar aparte cantidades pendientes con su unidad original.",
   "outcome": "Contrastar dos pedidos con lo que expedición pudo preparar. Una cifra parcial con cobertura identificada permite vender con un límite explícito y pedir el dato concreto que falta al resto de almacenes.",
-  "sources": {}
+  "sources": {},
+  "en": {
+    "title": "When inventory changes units",
+    "setting": "Integration · Agricultural cooperative",
+    "brief": "Six warehouses report fruit in boxes, kilos or pallets. Box weight varies by variety and supplier. Supermarket order negotiations start Monday. The manager wants consolidated inventory, but you can only speak to two warehouse leads before the meeting.",
+    "question": "What figure would you put on the table on Monday? Explain its origin, exclusions, and how to avoid promising stock that does not exist.",
+    "decision": "Choose one variety and the two available warehouses. Reconcile the latest physical count against subsequent movements. Convert only lots with a known weight and show the remainder in their original units.",
+    "outcome": "Compare two orders with what dispatch could actually prepare. A partial total with explicit coverage gives sales a defensible limit and tells the other warehouses exactly which data are missing.",
+    "sources": {},
+    "role": "Cooperative manager",
+    "roleNotes": "Two warehouse leads are available before Monday. I need to know what stock I can promise."
+  },
+  "role": "Gerente de la cooperativa",
+  "roleNotes": "Dos encargados están disponibles antes del lunes. Necesito saber qué existencias puedo prometer."
 }

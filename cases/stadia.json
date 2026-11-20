@@ -10,5 +10,23 @@
     "Google · Decisión de septiembre de 2022": "https://blog.google/products-and-platforms/products/stadia/message-on-stadia-streaming-strategy/",
     "Google · Reembolsos y partidas": "https://support.google.com/stadia/answer/12790109",
     "Google · Uso del mando tras el cierre": "https://support.google.com/stadia/answer/13067284"
-  }
+  },
+  "en": {
+    "title": "What do you owe someone who bought a game?",
+    "setting": "Product continuity · Google Stadia · September 2022",
+    "brief": "You run a cloud gaming service. Customers have bought games and controllers, and they need your servers to play their libraries. Stadia has stopped investing in first-party games and explored offering its technology to other publishers. Player adoption is below Google’s expectations. Staying online costs resources. Leaving shifts some of the cost to the people who trusted you.",
+    "question": "Would you fund another year of Stadia? Defend your decision to management and tell a player who just bought a game what will happen to their purchase.",
+    "decision": "In September 2022 Google announced the consumer service would close. Access continued until January 18, 2023. Google offered refunds for games and add-ons bought in the Stadia Store and Stadia hardware bought in the Google Store.",
+    "outcome": "Refunds began in November. Previous Stadia Pro subscription fees were generally excluded. Google provided a Bluetooth mode so controllers could still work with compatible devices. Whether players could keep their progress also depended on the publisher.",
+    "sources": {
+      "Google · 2021 strategy shift": "https://blog.google/products-and-platforms/products/stadia/focusing-on-stadias-future-as-a-platform-and-winding-down-sge/",
+      "Google · September 2022 decision": "https://blog.google/products-and-platforms/products/stadia/message-on-stadia-streaming-strategy/",
+      "Google · Refunds and saved games": "https://support.google.com/stadia/answer/12790109",
+      "Google · Using the controller after shutdown": "https://support.google.com/stadia/answer/13067284"
+    },
+    "role": "Player support lead",
+    "roleNotes": "Players need the servers to access their libraries. I care about what we tell them about their purchases."
+  },
+  "role": "Responsable de atención al jugador",
+  "roleNotes": "Los jugadores necesitan los servidores para acceder a sus bibliotecas. Me preocupa qué les decimos sobre sus compras."
 }

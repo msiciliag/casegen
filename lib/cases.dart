@@ -4,10 +4,15 @@ import 'package:sqflite/sqflite.dart';
 
 class BusinessCase {
   final String id, title, setting, brief, question, decision, outcome;
+  final String role, roleNotes;
   final bool isFde;
   final Map<String, String> sources;
-  BusinessCase(this.id, Map<String, dynamic> json)
-    : isFde = json['track'] == 'fde',
+  final Map<String, dynamic> data;
+  BusinessCase(String id, Map<String, dynamic> data) : this._(id, data, data);
+  BusinessCase._(this.id, this.data, Map<String, dynamic> json)
+    : role = json['role'],
+      roleNotes = json['roleNotes'],
+      isFde = json['track'] == 'fde',
       title = json['title'],
       setting = json['setting'],
       brief = json['brief'],
@@ -15,6 +20,12 @@ class BusinessCase {
       decision = json['decision'],
       outcome = json['outcome'],
       sources = Map<String, String>.from(json['sources']);
+
+  BusinessCase localized(String language) => BusinessCase._(
+    id,
+    data,
+    language == 'en' ? {...data, ...data['en']} : data,
+  );
 
   String get topic => setting.split(' · ').first;
   String get company => setting.split(' · ')[1];

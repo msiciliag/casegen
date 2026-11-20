@@ -6,5 +6,18 @@
   "question": "¿Qué activarías primero, quién decidiría qué es un atasco y cuándo apagarías el piloto?",
   "decision": "Durante dos turnos registrar avisos en silencio y cotejarlos con las anotaciones del operario. Probar en una línea, suprimir ventanas de limpieza acordadas y asignar un único responsable para aceptar la alerta.",
   "outcome": "Medir atascos detectados a tiempo y avisos inútiles por turno. Una línea con menos alarmas pero más atascos sin detectar sería motivo para volver al modo silencioso.",
-  "sources": {}
+  "sources": {},
+  "en": {
+    "title": "An alert the night shift will keep on",
+    "setting": "Operations · Packaging factory",
+    "brief": "Two packaging lines stop when they jam. A sensor also pulses while maintenance cleans the machine. The director wants phone alerts in ten days. You only have read access to signals. The shift lead says he will mute the channel if it wakes him during cleaning again.",
+    "question": "What would you enable first, who decides what counts as a jam, and when would you switch the pilot off?",
+    "decision": "Run alerts silently for two shifts and compare them with operators’ notes. Pilot one line, suppress agreed cleaning windows, and give one person responsibility for acknowledging each alert.",
+    "outcome": "Measure jams caught in time and nuisance alerts per shift. If alerts fall but more jams go undetected, return to silent mode.",
+    "sources": {},
+    "role": "Shift lead",
+    "roleNotes": "My team knows when each line is cleaned. I need someone accountable for each alert."
+  },
+  "role": "Jefe de turno",
+  "roleNotes": "Mi equipo sabe cuándo limpia cada línea. Solo aceptaré avisos si alguien se responsabiliza de atenderlos."
 }

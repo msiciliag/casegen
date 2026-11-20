@@ -6,5 +6,18 @@
   "question": "¿Qué pondrías en manos del despachador el viernes? Explica cómo identificarías una cita dudosa, qué dejarías manual y cómo sabrías si baja la espera.",
   "decision": "Acompañar un turno y medir tiempos desde la llegada hasta la asignación. Pilotar en un muelle una lista de citas con hora de actualización, identificador de reserva y confirmación humana para coincidencias ambiguas. Conservar la hoja impresa como respaldo.",
   "outcome": "Comparar esperas por franja y número de camiones atendidos. Si disminuye la espera del piloto pero aumenta en los otros siete muelles, revisar la asignación antes de ampliar.",
-  "sources": {}
+  "sources": {},
+  "en": {
+    "title": "The truck gets there before the data",
+    "setting": "Logistics · Port operator",
+    "brief": "Eight loading bays open at six. The night shift prints bookings from an ERP that exports a CSV every thirty minutes. Three carriers share a registration number and tractor units sometimes change. The yard manager wants queue forecasts by Friday. You get two days with a dispatcher and read-only ERP access.",
+    "question": "What would you put in the dispatcher’s hands by Friday? Explain how to flag a doubtful booking, what stays manual, and how you would tell whether waiting times fall.",
+    "decision": "Shadow a shift and time arrivals through bay assignment. Pilot one bay with a booking list showing refresh time and reservation ID. Have a person confirm ambiguous matches and keep the printed sheet as a fallback.",
+    "outcome": "Compare waiting times by time slot alongside the number of trucks served. If waits fall at the pilot bay but rise at the other seven, revisit allocation before expanding.",
+    "sources": {},
+    "role": "Yard dispatcher",
+    "roleNotes": "I can spend two shifts with you. I cannot change the ERP export."
+  },
+  "role": "Despachador de patio",
+  "roleNotes": "Puedo acompañarte dos jornadas. No puedo modificar la exportación del ERP."
 }

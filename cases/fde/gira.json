@@ -6,5 +6,18 @@
   "question": "¿Cómo organizarías el acceso esta noche y qué riesgo residual explicarías al promotor antes de abrir?",
   "decision": "Descargar listas mínimas y repartir entradas entre puertas por un criterio visible. Registrar cada acceso en el dispositivo asignado y enviar excepciones a una mesa con una lista única. Ensayar pérdida de red y sustitución de un lector.",
   "outcome": "Registrar espera y excepciones durante la primera oleada. Si se intercambian lectores sin transferir su registro, volver al control manual de esa puerta hasta conciliarlo.",
-  "sources": {}
+  "sources": {},
+  "en": {
+    "title": "Opening the gates without a signal",
+    "setting": "Offline operations · Touring festival",
+    "brief": "Two gates must admit 1,200 people. Reception drops out and scanners have three hours of battery life. The organizer offers four phones, a ticket list and half an hour to rehearse. The same QR code could turn up at both gates.",
+    "question": "How would you run admission tonight? What remaining risk would you explain to the promoter before the gates open?",
+    "decision": "Download minimal lists and assign tickets to gates using a visible rule. Log each admission on its assigned device. Send exceptions to a desk with one master list. Rehearse loss of connectivity and a scanner change.",
+    "outcome": "Track queues and exceptions during the first rush. If scanners are swapped without transferring their logs, switch that gate to manual checks until the records are reconciled.",
+    "sources": {},
+    "role": "Admissions lead",
+    "roleNotes": "I only have four phones and half an hour to rehearse. Reception fails at the gates."
+  },
+  "role": "Responsable de accesos",
+  "roleNotes": "Solo dispongo de cuatro teléfonos y media hora para un ensayo. La cobertura falla en las puertas."
 }

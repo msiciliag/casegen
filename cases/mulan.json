@@ -10,5 +10,23 @@
     "Disney · Decisión de distribución, agosto de 2020": "https://thewaltdisneycompany.com/app/uploads/2020/08/q3-fy20-earnings-transcript.pdf",
     "Disney · Estreno en Disney+": "https://thewaltdisneycompany.com/news/costumes-in-disneys-mulan-reflect-the-rich-history-of-the-epic-tale/",
     "Disney · Balance de distribución en 2021": "https://thewaltdisneycompany.com/app/uploads/2021/06/q3-fy21-earnings-transcript.pdf"
-  }
+  },
+  "en": {
+    "title": "A film is ready. The theaters are only half open.",
+    "setting": "Distribution · Disney · Summer 2020",
+    "brief": "You are distributing Mulan. The pandemic has already pushed the release back several times. Some markets can open theaters while others still face restrictions. Disney+ reaches households directly, but it has no announced launch date in some countries. Another delay keeps a major theatrical opening possible. A home release means deciding what an existing subscriber gets.",
+    "question": "Plan the release in two markets: one with Disney+ and closed theaters, and one with open theaters and no Disney+. What would you charge in each channel? How would you answer a theater owner asking for exclusivity?",
+    "decision": "Disney chose different channels by market. On September 4 it offered Mulan for an additional charge on Disney+ in several countries, including $29.99 in the US. It scheduled theatrical releases where theaters were open and Disney+ had no announced launch.",
+    "outcome": "In 2021 Disney again combined cinemas and paid Disney+ access for films including Cruella and Black Widow. It said it would decide film by film. The repeat rollout gives you a comparison, but these sources do not disclose the margin on Mulan.",
+    "sources": {
+      "Disney · Spring release schedule": "https://thewaltdisneycompany.com/news/the-walt-disney-studios-announces-updated-release-schedule/",
+      "Disney · August 2020 distribution decision": "https://thewaltdisneycompany.com/app/uploads/2020/08/q3-fy20-earnings-transcript.pdf",
+      "Disney · Disney+ premiere": "https://thewaltdisneycompany.com/news/costumes-in-disneys-mulan-reflect-the-rich-history-of-the-epic-tale/",
+      "Disney · 2021 distribution review": "https://thewaltdisneycompany.com/app/uploads/2021/06/q3-fy21-earnings-transcript.pdf"
+    },
+    "role": "Distribution lead",
+    "roleNotes": "Restrictions vary by market. Some territories still have no Disney+ launch date."
+  },
+  "role": "Responsable de distribución",
+  "roleNotes": "Las restricciones varían por mercado. Algunos territorios todavía no tienen fecha de lanzamiento de Disney+."
 }

@@ -6,5 +6,18 @@
   "question": "La concejala quiere un chat que responda al público. ¿Qué demostrarías el viernes, con qué consultas lo evaluarías y quién podría ver los resultados?",
   "decision": "Empezar en el puesto interno de las archiveras con búsqueda por municipio, alias y fecha. Mostrar la imagen y la signatura. Reservar consultas de cada idioma para evaluar sin ajustar el sistema a esas mismas preguntas.",
   "outcome": "Medir minutos hasta dar con la escritura y búsquedas que acaban en un documento equivocado. Si la mejora solo aparece en textos impresos, documentar esa cobertura y mantener el circuito manual para manuscritos.",
-  "sources": {}
+  "sources": {},
+  "en": {
+    "title": "Three languages, one missing deed",
+    "setting": "Search · Municipal archive",
+    "brief": "Two archivists handle requests across 18,000 digitized deeds. Some originals are handwritten, and place names change language depending on the year. Scans must stay on the municipal network. You have one week and forty previous requests with verified references.",
+    "question": "A council member wants a public chatbot. What would you demonstrate on Friday, which queries would you test, and who would see the results?",
+    "decision": "Start at the archivists’ internal workstation. Search by municipality, alias and date, and show the scan and shelf mark. Hold back queries in each language so your evaluation uses requests you did not tune on.",
+    "outcome": "Measure time to find the deed and searches that end at the wrong document. If only printed records improve, document the coverage and keep manual lookup for handwritten deeds.",
+    "sources": {},
+    "role": "Municipal archivist",
+    "roleNotes": "I can verify shelf marks during the pilot. The old requests have verified references."
+  },
+  "role": "Archivera municipal",
+  "roleNotes": "Puedo validar signaturas durante la prueba. Las consultas antiguas incluyen referencias correctas."
 }

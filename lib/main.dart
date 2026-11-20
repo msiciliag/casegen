@@ -1,10 +1,22 @@
+import 'profile.dart';
+import 'narration.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'language.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'cases.dart';
 import 'ai.dart';
 import 'cover.dart';
 
-void main() => runApp(const CaseGen());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  try {
+    await restoreLanguage();
+  } on Exception {
+    /* Use Spanish if storage is unavailable. */
+  }
+  runApp(const CaseGen());
+}
 
 const heading = TextStyle(
   fontSize: 34,
@@ -22,21 +34,27 @@ const meta = TextStyle(
 class CaseGen extends StatelessWidget {
   const CaseGen({super.key});
   @override
-  Widget build(BuildContext context) => MaterialApp(
-    title: 'CaseGen',
-    debugShowCheckedModeBanner: false,
-    theme: ThemeData(
-      useMaterial3: true,
-      scaffoldBackgroundColor: paper,
-      colorScheme: ColorScheme.fromSeed(
-        seedColor: orange,
-        primary: ink,
-        surface: paper,
+  Widget build(BuildContext context) => ValueListenableBuilder<String>(
+    valueListenable: appLanguage,
+    builder: (context, code, _) => MaterialApp(
+      locale: Locale(code),
+      supportedLocales: const [Locale("es"), Locale("en")],
+      localizationsDelegates: GlobalMaterialLocalizations.delegates,
+      title: 'CaseGen',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        useMaterial3: true,
+        scaffoldBackgroundColor: paper,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: orange,
+          primary: ink,
+          surface: paper,
+        ),
+        dividerColor: line,
+        visualDensity: VisualDensity.standard,
       ),
-      dividerColor: line,
-      visualDensity: VisualDensity.standard,
+      home: Library(),
     ),
-    home: const Library(),
   );
 }
 
@@ -51,6 +69,27 @@ class _LibraryState extends State<Library> {
   late var cases = BusinessCase.load();
   late var attempts = history.all();
   int tab = 0;
+  Profile? profile;
+  @override
+  void initState() {
+    super.initState();
+    Profile.read()
+        .then((p) {
+          if (mounted) setState(() => profile = p);
+        })
+        .catchError((Object _) {});
+  }
+
+  Future<void> editProfile() async {
+    final updated = await Navigator.push<Profile>(
+      context,
+      MaterialPageRoute(
+        builder: (ctx) =>
+            ProfileForm((p) => Navigator.pop(ctx, p), previous: profile),
+      ),
+    );
+    if (updated != null && mounted) setState(() => profile = updated);
+  }
 
   Future<void> visit(BusinessCase c, [String? answer]) async {
     await Navigator.push(
@@ -62,23 +101,12 @@ class _LibraryState extends State<Library> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    bottomNavigationBar: NavigationBar(
-      height: 66,
-      backgroundColor: paper,
-      indicatorColor: const Color(0xFFFFDCCA),
-      selectedIndex: tab,
-      onDestinationSelected: (i) => setState(() {
+    bottomNavigationBar: CaseNav(
+      tab,
+      (i) => setState(() {
         tab = i;
         if (i == 2) attempts = history.all();
       }),
-      destinations: const [
-        NavigationDestination(icon: Icon(Icons.grid_view), label: 'Biblioteca'),
-        NavigationDestination(
-          icon: Icon(Icons.construction),
-          label: 'Campo FDE',
-        ),
-        NavigationDestination(icon: Icon(Icons.history), label: 'Historial'),
-      ],
     ),
     body: SafeArea(
       child: FutureBuilder(
@@ -88,12 +116,15 @@ class _LibraryState extends State<Library> {
             return Center(
               child: TextButton(
                 onPressed: () => setState(() => cases = BusinessCase.load()),
-                child: const Text('Volver a cargar los casos'),
+                child: Text(tr('Volver a cargar los casos', 'Reload cases')),
               ),
             );
           if (!snapshot.hasData)
             return const Center(child: CircularProgressIndicator());
-          final allCases = snapshot.requireData;
+          final code = Localizations.localeOf(context).languageCode;
+          final allCases = snapshot.requireData
+              .map((c) => c.localized(code))
+              .toList();
           final data = allCases.where((c) => c.isFde == (tab == 1)).toList();
           return ListView(
             padding: const EdgeInsets.fromLTRB(22, 18, 22, 28),
@@ -119,7 +150,7 @@ class _LibraryState extends State<Library> {
                   ),
                   const Spacer(),
                   IconButton(
-                    tooltip: 'Configurar IA',
+                    tooltip: tr('Configuración', 'Settings'),
                     icon: const Icon(Icons.tune),
                     onPressed: () => openAiSettings(context),
                   ),
@@ -132,23 +163,30 @@ class _LibraryState extends State<Library> {
                 children: [
                   Expanded(
                     child: Text(
-                      ['Biblioteca', 'Campo FDE', 'Historial'][tab],
+                      [
+                        tr('Biblioteca', 'Library'),
+                        tr('Campo FDE', 'FDE fieldwork'),
+                        tr('Perfil', 'Profile'),
+                      ][tab],
                       style: heading,
                     ),
                   ),
                   if (tab < 2)
                     Text(
-                      '${data.length} casos',
+                      tr('${data.length} casos', '${data.length} cases'),
                       style: meta.copyWith(color: muted),
                     ),
                 ],
               ),
               const SizedBox(height: 20),
               if (tab == 1)
-                const Padding(
+                Padding(
                   padding: EdgeInsets.only(bottom: 16),
                   child: Text(
-                    "Simulaciones de Forward Deployed Engineering. Trabaja con el cliente y decide qué desplegarías primero.",
+                    tr(
+                      'Simulaciones de Forward Deployed Engineering. Trabaja con el cliente y decide qué desplegarías primero.',
+                      'Forward deployed engineering simulations. Work with the client and decide what you would deploy first.',
+                    ),
                   ),
                 ),
               if (tab < 2 && data.isNotEmpty) ...[
@@ -180,11 +218,11 @@ class _LibraryState extends State<Library> {
                           ),
                           const SizedBox(height: 16),
                           const Divider(color: Color(0xFF484941)),
-                          const Row(
+                          Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                'Abrir caso',
+                                tr('Abrir caso', 'Open case'),
                                 style: TextStyle(
                                   color: paper,
                                   fontWeight: FontWeight.w600,
@@ -224,6 +262,38 @@ class _LibraryState extends State<Library> {
                   const Divider(height: 1),
                 ],
               ],
+              if (tab == 2) ...[
+                ListTile(
+                  contentPadding: EdgeInsets.zero,
+                  leading: const CircleAvatar(
+                    backgroundColor: ink,
+                    child: Icon(Icons.person_outline, color: paper),
+                  ),
+                  title: Text(
+                    profile?.name.isNotEmpty == true
+                        ? profile!.name
+                        : tr('Mi perfil', 'My profile'),
+                  ),
+                  subtitle: Text(tr('Solo en este móvil', 'On this device')),
+                  trailing: IconButton(
+                    tooltip: tr('Editar perfil', 'Edit profile'),
+                    onPressed: editProfile,
+                    icon: const Icon(Icons.edit_outlined),
+                  ),
+                ),
+                if (profile != null)
+                  OutlinedButton(
+                    onPressed: () =>
+                        setState(() => tab = profile!.fieldwork ? 1 : 0),
+                    child: Text(
+                      profile!.fieldwork
+                          ? tr('Practicar campo FDE', 'Practice fieldwork')
+                          : tr('Practicar negocios', 'Practice business cases'),
+                    ),
+                  ),
+                const Divider(height: 32),
+                Text(tr('Historial', 'History'), style: meta),
+              ],
               if (tab == 2)
                 FutureBuilder(
                   future: attempts,
@@ -232,20 +302,28 @@ class _LibraryState extends State<Library> {
                       return TextButton(
                         onPressed: () =>
                             setState(() => attempts = history.all()),
-                        child: const Text('Reintentar cargar el historial'),
+                        child: Text(
+                          tr(
+                            'Reintentar cargar el historial',
+                            'Reload history',
+                          ),
+                        ),
                       );
                     if (!s.hasData) return const LinearProgressIndicator();
                     if (s.requireData.isEmpty)
                       return Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text(
-                            'Tus propuestas aparecerán aquí cuando resuelvas un caso.',
+                          Text(
+                            tr(
+                              'Tus propuestas aparecerán aquí cuando resuelvas un caso.',
+                              'Your proposals will appear here after you complete a case.',
+                            ),
                             style: body,
                           ),
                           TextButton(
                             onPressed: () => setState(() => tab = 0),
-                            child: const Text('Elegir un caso'),
+                            child: Text(tr('Elegir un caso', 'Choose a case')),
                           ),
                         ],
                       );
@@ -254,7 +332,13 @@ class _LibraryState extends State<Library> {
                         for (final row in s.requireData)
                           ListTile(
                             contentPadding: EdgeInsets.zero,
-                            title: Text(row['title'] as String),
+                            title: Text(
+                              allCases
+                                      .where((c) => c.id == row['case_id'])
+                                      .firstOrNull
+                                      ?.title ??
+                                  row['title'] as String,
+                            ),
                             subtitle: Text(
                               row['answer'] as String,
                               maxLines: 2,
@@ -267,25 +351,31 @@ class _LibraryState extends State<Library> {
                               if (c != null) visit(c, row['answer'] as String);
                             },
                             trailing: IconButton(
-                              tooltip: 'Borrar respuesta',
+                              tooltip: tr(
+                                'Borrar respuesta',
+                                'Delete response',
+                              ),
                               icon: const Icon(Icons.delete_outline),
                               onPressed: () async {
                                 final ok = await showDialog<bool>(
                                   context: context,
                                   builder: (ctx) => AlertDialog(
-                                    title: const Text(
-                                      '¿Borrar esta respuesta?',
+                                    title: Text(
+                                      tr(
+                                        '¿Borrar esta respuesta?',
+                                        'Delete this response?',
+                                      ),
                                     ),
                                     actions: [
                                       TextButton(
                                         onPressed: () =>
                                             Navigator.pop(ctx, false),
-                                        child: const Text('Cancelar'),
+                                        child: Text(tr('Cancelar', 'Cancel')),
                                       ),
                                       TextButton(
                                         onPressed: () =>
                                             Navigator.pop(ctx, true),
-                                        child: const Text('Borrar'),
+                                        child: Text(tr('Borrar', 'Delete')),
                                       ),
                                     ],
                                   ),
@@ -300,9 +390,12 @@ class _LibraryState extends State<Library> {
                                       ScaffoldMessenger.of(
                                         context,
                                       ).showSnackBar(
-                                        const SnackBar(
+                                        SnackBar(
                                           content: Text(
-                                            'No se pudo borrar la respuesta.',
+                                            tr(
+                                              'No se pudo borrar la respuesta.',
+                                              'Could not delete the response.',
+                                            ),
                                           ),
                                         ),
                                       );
@@ -335,6 +428,7 @@ class Reader extends StatefulWidget {
 class _ReaderState extends State<Reader> {
   final input = TextEditingController();
   final scroll = ScrollController();
+  final interview = <Map<String, String>>[];
   late String? saved = widget.answer;
   bool busy = false;
   String? error;
@@ -349,7 +443,12 @@ class _ReaderState extends State<Reader> {
     if (busy || saved != null) return;
     final answer = input.text.trim();
     if (answer.isEmpty) {
-      setState(() => error = 'Escribe tu propuesta para continuar.');
+      setState(
+        () => error = tr(
+          'Escribe tu propuesta para continuar.',
+          'Write your proposal to continue.',
+        ),
+      );
       return;
     }
     setState(() {
@@ -365,7 +464,10 @@ class _ReaderState extends State<Reader> {
     } catch (_) {
       if (mounted)
         setState(
-          () => error = 'No se pudo guardar. Puedes volver a intentarlo.',
+          () => error = tr(
+            'No se pudo guardar. Puedes volver a intentarlo.',
+            'Could not save. You can try again.',
+          ),
         );
     } finally {
       if (mounted) setState(() => busy = false);
@@ -374,7 +476,8 @@ class _ReaderState extends State<Reader> {
 
   @override
   Widget build(BuildContext context) {
-    final c = widget.c;
+    final c = widget.c.localized(appLanguage.value);
+    Localizations.localeOf(context);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: paper,
@@ -398,7 +501,28 @@ class _ReaderState extends State<Reader> {
             Text(c.title, style: heading),
             const SizedBox(height: 22),
             if (saved == null) ...[
+              Narration('${c.title}. ${c.brief} ${c.question}'),
               Text(c.brief, style: body),
+              OutlinedButton.icon(
+                icon: const Icon(Icons.forum_outlined),
+                label: Text(tr('Hablar con el cliente', 'Talk to the client')),
+                onPressed: () async {
+                  await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => Scaffold(
+                        appBar: AppBar(title: Text(c.role)),
+                        body: SafeArea(
+                          child: ListView(
+                            padding: const EdgeInsets.all(20),
+                            children: [AiReview(c, '', interview: interview)],
+                          ),
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              ),
               const Divider(height: 36),
               Text(
                 c.question,
@@ -411,7 +535,7 @@ class _ReaderState extends State<Reader> {
                 maxLines: 10,
                 readOnly: busy,
                 decoration: InputDecoration(
-                  labelText: 'Tu propuesta',
+                  labelText: tr('Tu propuesta', 'Your proposal'),
                   alignLabelWithHint: true,
                   border: const OutlineInputBorder(),
                   errorText: error,
@@ -420,26 +544,33 @@ class _ReaderState extends State<Reader> {
               const SizedBox(height: 16),
               FilledButton(
                 onPressed: busy ? null : save,
-                child: const Text('Guardar y ver el desenlace'),
+                child: Text(
+                  tr('Guardar y ver el desenlace', 'Save and see the outcome'),
+                ),
               ),
             ] else ...[
               Text(
-                c.isFde ? 'Un enfoque posible' : 'La decisión real',
+                c.isFde
+                    ? tr('Un enfoque posible', 'One possible approach')
+                    : tr('La decisión real', 'The actual decision'),
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               Text(c.decision, style: body),
               const SizedBox(height: 20),
               Text(
-                c.isFde ? 'Cómo validar el piloto' : 'Qué ocurrió después',
+                c.isFde
+                    ? tr('Cómo validar el piloto', 'How to test the pilot')
+                    : tr('Qué ocurrió después', 'What happened next'),
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               Text(c.outcome, style: body),
               const Divider(height: 36),
-              const Text('Tu propuesta', style: meta),
+              Text(tr('Tu propuesta', 'Your proposal'), style: meta),
               SelectableText(saved!, style: body),
               const Divider(height: 36),
               AiReview(c, saved!),
-              if (c.sources.isNotEmpty) const Text('Fuentes', style: meta),
+              if (c.sources.isNotEmpty)
+                Text(tr('Fuentes', 'Sources'), style: meta),
               for (final source in c.sources.entries)
                 ListTile(
                   contentPadding: EdgeInsets.zero,
@@ -455,15 +586,20 @@ class _ReaderState extends State<Reader> {
                     } catch (_) {}
                     if (context.mounted)
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text('No se pudo abrir la fuente.'),
+                        SnackBar(
+                          content: Text(
+                            tr(
+                              'No se pudo abrir la fuente.',
+                              'Could not open the source.',
+                            ),
+                          ),
                         ),
                       );
                   },
                 ),
               FilledButton(
                 onPressed: () => Navigator.pop(context),
-                child: const Text('Volver'),
+                child: Text(tr('Volver', 'Back')),
               ),
             ],
           ],

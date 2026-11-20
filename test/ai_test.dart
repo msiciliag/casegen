@@ -33,15 +33,10 @@ void main() {
       }
 
       await edit();
-      expect(
-        tester.widget<TextField>(find.byType(TextField).last).controller!.text,
-        isEmpty,
-      );
-      await tester.tap(find.text('Groq'));
-      await tester.pumpAndSettle();
       await tester.tap(find.text('Otro compatible con OpenAI').last);
       await tester.pumpAndSettle();
       final fields = find.byType(TextField);
+      expect(tester.widget<TextField>(fields.last).controller!.text, isEmpty);
       await tester.enterText(
         fields.at(0),
         'https://example.org/v1/chat/completions',
@@ -79,6 +74,20 @@ void main() {
       expect(payload['reasoning_effort'], 'medium');
       expect(payload['max_completion_tokens'], 2048);
       expect(payload['stream'], true);
+      final chat =
+          config.payload(
+                c,
+                '¿Qué necesitas?',
+                interview: [
+                  {'role': 'user', 'content': '¿Quién decide?'},
+                  {'role': 'assistant', 'content': 'Yo.'},
+                ],
+              )['messages']
+              as List;
+      expect(chat.first['content'], contains(c.roleNotes));
+      expect(chat.first['content'], isNot(contains(c.decision)));
+      expect(chat.last['content'], '¿Qué necesitas?');
+      expect(chat.length, 4);
       final other = Connection(
         checkedEndpoint('https://example.org/v1/chat/completions'),
         'modelo',

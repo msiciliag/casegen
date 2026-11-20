@@ -9,5 +9,22 @@
     "Netflix · Acuerdo con Microsoft, julio de 2022": "https://about.netflix.com/en/news/netflix-partners-with-microsoft",
     "Netflix · Condiciones de lanzamiento en EE. UU.": "https://about.netflix.com/en/news/announcing-basic-with-ads-us",
     "Netflix · Primeros seis meses": "https://about.netflix.com/en/news/netflix-2023-upfront-building-a-forever-business"
-  }
+  },
+  "en": {
+    "title": "What is an uninterrupted hour worth?",
+    "setting": "Pricing · Netflix · US, summer 2022",
+    "brief": "You run pricing at Netflix. A cheaper ad-supported plan has been announced, and Microsoft will help sell ads. You still have to design the offer. A household priced out today could become a subscriber. An existing customer who switches will pay less. More advertising can bring in revenue and give viewers a reason to leave.",
+    "question": "What price, ad load and features would you pitch to management? Choose one signal that would make you revise the offer after launch.",
+    "decision": "Netflix priced the US plan at $6.99 per month, with an average of four to five minutes of ads per hour. Downloads were unavailable at launch, and licensing restrictions left some titles out.",
+    "outcome": "Six months after launch, in May 2023, Netflix reported nearly five million monthly active users of the plan worldwide. To compare the economics of your offer, you would also need ad revenue and the share of customers who switched from a more expensive plan.",
+    "sources": {
+      "Netflix · Microsoft partnership, July 2022": "https://about.netflix.com/en/news/netflix-partners-with-microsoft",
+      "Netflix · US launch terms": "https://about.netflix.com/en/news/announcing-basic-with-ads-us",
+      "Netflix · The first six months": "https://about.netflix.com/en/news/netflix-2023-upfront-building-a-forever-business"
+    },
+    "role": "Commercial lead",
+    "roleNotes": "I care about new subscribers and downgrades. I have no confirmed ad revenue forecast."
+  },
+  "role": "Responsable comercial",
+  "roleNotes": "Me preocupan tanto las nuevas altas como las bajadas de plan. No tengo una previsión confirmada de ingresos por anuncios."
 }
