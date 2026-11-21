@@ -179,6 +179,17 @@ class _LibraryState extends State<Library> {
                 ],
               ),
               const SizedBox(height: 20),
+              if (tab == 0)
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 18),
+                  child: Text(
+                    tr(
+                      '¿Qué harías si Netflix te pidiera poner precio a un plan con anuncios? Lee o escucha el caso, decide qué propondrías y explica por qué. Después descubre qué hizo la empresa. En Campo FDE puedes practicar cómo resolver un encargo de un cliente.',
+                      'What would you charge if Netflix asked you to price a plan with ads? Read or listen to the case, decide what you would propose and explain why. Then find out what the company did. In FDE fieldwork, practise solving a client’s problem.',
+                    ),
+                    style: const TextStyle(fontSize: 16, height: 1.4),
+                  ),
+                ),
               if (tab == 1)
                 Padding(
                   padding: EdgeInsets.only(bottom: 16),
