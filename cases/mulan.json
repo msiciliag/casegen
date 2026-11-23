@@ -24,9 +24,57 @@
       "Disney · Disney+ premiere": "https://thewaltdisneycompany.com/news/costumes-in-disneys-mulan-reflect-the-rich-history-of-the-epic-tale/",
       "Disney · 2021 distribution review": "https://thewaltdisneycompany.com/app/uploads/2021/06/q3-fy21-earnings-transcript.pdf"
     },
-    "role": "Distribution lead",
-    "roleNotes": "Restrictions vary by market. Some territories still have no Disney+ launch date."
+    "role": "Cinema chain programmer",
+    "roleNotes": "In this simulation I reserve screens and book local ads before final capacity restrictions are known. I could start with a few screens and expand based on presales. I need a clear date or condition for ending exclusivity. Disney+ revenue is outside my remit.",
+    "playerRole": "Disney release lead for Mulan",
+    "remit": "An external exhibitor in a market with open theaters. She decides what her chain screens. Disney controls the digital release.",
+    "starterQuestion": "What commitment would you need to reserve screens?",
+    "moves": [
+      "Stagger the release as theaters reopen",
+      "Launch through different channels by market"
+    ],
+    "moveDebriefs": [
+      "Waiting protects the theatrical window but keeps families waiting. What reopening rate would justify another delay?",
+      "Matching channels to markets gives you more release options. What exclusivity can you offer a theater when households abroad already have digital access?"
+    ],
+    "scene": {
+      "file": "mulan-v1-en.mp3",
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "A reconstruction. Summer, twenty twenty. At Disney, you have to recommend how to release Mulan. In one market, theaters are closed and families already have Disney Plus. In another, theaters can open and the platform hasn't launched yet. A programmer from a cinema chain in that second market calls you."
+        },
+        {
+          "speaker": "Cinema chain programmer",
+          "text": "I can hold our biggest screen for you. Once I print the posters, though, that money is ours to lose. If the date slips again, I have a screen to fill. And if people abroad can already watch at home, my customers will ask why they should buy a ticket. What can I actually announce?"
+        }
+      ]
+    }
   },
-  "role": "Responsable de distribución",
-  "roleNotes": "Las restricciones varían por mercado. Algunos territorios todavía no tienen fecha de lanzamiento de Disney+."
+  "role": "Programadora de una cadena de cines",
+  "roleNotes": "En esta simulación, reservo salas y encargo publicidad local antes de conocer todas las restricciones de aforo. Puedo estudiar un compromiso inicial de pocas pantallas y ampliarlo con la preventa. Necesito una fecha o condición clara para levantar la exclusividad; no conozco los ingresos de Disney+.",
+  "playerRole": "Responsable del estreno de Mulán en Disney",
+  "remit": "Negocias con una exhibidora externa en un mercado con salas abiertas. Decide qué película programa su cadena. Disney conserva la decisión sobre el estreno digital.",
+  "starterQuestion": "¿Qué compromiso necesitarías para reservar pantallas?",
+  "moves": [
+    "Escalonar el estreno hasta reabrir más salas",
+    "Abrir un canal distinto en cada mercado"
+  ],
+  "moveDebriefs": [
+    "Esperar protege la ventana del cine, pero alarga la espera de las familias. ¿Qué tasa de reapertura justificaría seguir aplazando?",
+    "Adaptar cada canal al mercado amplía las opciones de estreno. Queda negociar qué exclusividad recibe una sala si otro país ya tiene acceso digital."
+  ],
+  "scene": {
+    "file": "mulan-v1-es.mp3",
+    "lines": [
+      {
+        "speaker": "Narración",
+        "text": "Recreación. Verano de dos mil veinte. Trabajas en Disney y te toca recomendar cómo estrenar Mulán. En un mercado las salas siguen cerradas y las familias ya pueden ver Disney Plus. En otro, los cines han abierto y la plataforma aún no ha llegado. Te llama la programadora de una cadena de ese segundo mercado."
+      },
+      {
+        "speaker": "Programadora de la cadena de cines",
+        "text": "Puedo reservarte la sala grande. Pero en cuanto imprima los carteles, el gasto es nuestro. Si el estreno vuelve a moverse, tendré que encontrar otra película. Y si fuera de aquí ya se puede ver en casa, mi público va a preguntarme por qué comprar la entrada. ¿Qué puedo anunciar con seguridad?"
+      }
+    ]
+  }
 }

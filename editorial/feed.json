@@ -1,0 +1,336 @@
+{
+  "schema": 1,
+  "revision": 1,
+  "cases": [
+    {
+      "id": "news-2026-11-netflix-comedy",
+      "newsDate": "2026-11-19",
+      "title": "¿Le darías una serie a quien llena un teatro?",
+      "setting": "Desarrollo de formatos · Netflix · noviembre de 2026",
+      "playerRole": "Llevas la estrategia de comedia de Netflix.",
+      "role": "Productora de desarrollo de comedia en Netflix",
+      "remit": "Trabaja para el estudio. Compara qué se puede probar en el escenario y qué exigiría escribir un piloto. La audiencia y la representante de la artista quedan fuera de su papel.",
+      "roleNotes": "Personaje simulado. Conoces el trabajo previo de Nikki Glaser en especiales de Netflix y en el roast de Tom Brady. Puedes explicar la diferencia entre encargar un especial y desarrollar una serie. No dispones de un presupuesto aprobado, derechos negociados ni datos de conversión entre formatos.",
+      "starterQuestion": "¿Qué podrías probar antes de comprometerte con una temporada?",
+      "brief": "Nikki Glaser ya tiene una relación con Netflix y un público que la conoce por sus monólogos y su aparición en el roast de Tom Brady. Tu equipo quiere trabajar con ella de nuevo. Puedes apostar por el formato que el público conoce o dedicar parte del acuerdo a averiguar si esa voz sostendría una ficción.",
+      "question": "¿Qué encargarías ahora y qué dejarías condicionado a una prueba? Defiende la decisión ante quien tiene que reservar al equipo de producción.",
+      "moves": [
+        "Encargar otro especial",
+        "Desarrollar un piloto de ficción"
+      ],
+      "decision": "El 19 de noviembre Netflix presentó NIAJ Studios y anunció su primer acuerdo, con Glaser. Incluía dos especiales exclusivos y el desarrollo de una serie de ficción protagonizada por ella.",
+      "outcome": "A fecha del anuncio se había comunicado el acuerdo. Desarrollar la serie todavía dejaba abierta su producción. La fuente no ofrecía audiencia ni rentabilidad de esos proyectos.",
+      "sources": {
+        "Netflix · Anuncio del 19 de noviembre de 2026": "https://about.netflix.com/en/news/netflix-launches-netflix-is-a-joke-niaj-studios"
+      },
+      "en": {
+        "title": "Would you give a stand-up star a series?",
+        "setting": "Format development · Netflix · November 2026",
+        "playerRole": "You lead comedy strategy at Netflix.",
+        "role": "Comedy development producer at Netflix",
+        "remit": "She works for the studio. Ask what can be tested on stage and what would require a scripted pilot. The audience and the artist’s agent have different roles.",
+        "roleNotes": "Simulated stakeholder. You know Glaser’s earlier Netflix stand-up and her appearance on the Tom Brady roast. You can discuss commissioning a special versus developing a scripted show. You have no approved budget, negotiated rights or cross-format conversion data.",
+        "starterQuestion": "What could you test before committing to a season?",
+        "brief": "Nikki Glaser already has a relationship with Netflix and a following familiar with her stand-up and the Tom Brady roast. Your team wants to work with her again. You could invest in the format viewers know or use part of the deal to see whether her voice carries a scripted story.",
+        "question": "What would you commission now, and what would need a test first? Defend the plan to the person who has to book the production crew.",
+        "moves": [
+          "Commission another special",
+          "Develop a scripted pilot"
+        ],
+        "decision": "On November 19, Netflix introduced NIAJ Studios and named Glaser its first partner. The deal included two exclusive stand-up specials and development of a scripted series starring her.",
+        "outcome": "The announcement established a deal. The scripted series was in development. Production, viewing figures and returns for these projects were still open questions in that announcement.",
+        "sources": {
+          "Netflix · November 19, 2026 announcement": "https://about.netflix.com/en/news/netflix-launches-netflix-is-a-joke-niaj-studios"
+        },
+        "moveDebriefs": [
+          "A special makes use of an established relationship. You still need evidence about how viewers respond to scripted characters and conflict.",
+          "A pilot buys information about the format change. Name the sign that would justify further investment before booking a season."
+        ],
+        "factCheck": {
+          "question": "What was the status of Glaser’s series on November 19?",
+          "options": [
+            "A season had been ordered.",
+            "It was in development."
+          ],
+          "correct": 1,
+          "explanation": "The agreement covers development of the scripted series. The two stand-up specials are separately named projects starring Glaser."
+        },
+        "scene": {
+          "file": "news-2026-11-netflix-comedy-v1-en.mp3",
+          "lines": [
+            {
+              "speaker": "You",
+              "text": "It's my call what we pitch to Nikki Glaser. I'm at Netflix with the producer who develops our comedy projects."
+            },
+            {
+              "speaker": "Comedy development producer at Netflix",
+              "text": "With a special, I know what to look for. I can sit at the back of the theater and hear which jokes land. How do I tell if a character can carry a second episode?"
+            },
+            {
+              "speaker": "You",
+              "text": "Before I book anybody, I want to know what we can try with her. Where would you start?"
+            },
+            {
+              "speaker": "Comedy development producer at Netflix",
+              "text": "Tell me what you're unsure about. I can set something up with the writers, but first I need to know what would change your mind."
+            }
+          ]
+        }
+      },
+      "moveDebriefs": [
+        "Un especial aprovecha una relación probada. Para saber si también funcionaría una serie, aún necesitarías observar cómo responde el público a personajes y conflictos escritos.",
+        "Un piloto compra información sobre el cambio de formato. Fija qué tendrías que ver para seguir invirtiendo antes de reservar una temporada."
+      ],
+      "factCheck": {
+        "question": "¿En qué fase estaba la serie de Glaser el 19 de noviembre?",
+        "options": [
+          "Tenía una temporada encargada.",
+          "Estaba en desarrollo."
+        ],
+        "correct": 1,
+        "explanation": "El acuerdo incluye desarrollar la ficción. Los dos especiales sí figuran en el anuncio como proyectos protagonizados por Glaser."
+      },
+      "scene": {
+        "file": "news-2026-11-netflix-comedy-v1-es.mp3",
+        "lines": [
+          {
+            "speaker": "Tú",
+            "text": "Hoy me toca decidir qué le proponemos a Nikki Glaser. Estoy en Netflix con la productora que desarrolla nuestros proyectos de comedia."
+          },
+          {
+            "speaker": "Productora de desarrollo de comedia en Netflix",
+            "text": "Con un especial sé qué mirar. Me siento al fondo del teatro y enseguida oigo qué chistes funcionan. Con una serie, ¿cómo probamos que el personaje aguanta un segundo episodio?"
+          },
+          {
+            "speaker": "Tú",
+            "text": "Antes de reservar a nadie, quiero entender qué podemos probar con la artista. ¿Por dónde empezarías tú?"
+          },
+          {
+            "speaker": "Productora de desarrollo de comedia en Netflix",
+            "text": "Dime qué duda quieres resolver. Puedo preparar una prueba con los guionistas, pero primero necesito saber qué te haría cambiar de idea."
+          }
+        ]
+      }
+    },
+    {
+      "id": "news-2026-11-spotify-authors",
+      "newsDate": "2026-11-18",
+      "title": "¿Quién da el visto bueno a la voz de un libro?",
+      "setting": "Expansión de producto · Spotify · noviembre de 2026",
+      "playerRole": "Diriges la expansión de las herramientas para autores en Spotify.",
+      "role": "Autora independiente que publica en español",
+      "remit": "Es una posible usuaria de tu herramienta. Puede contarte qué revisaría en su libro y cuándo lo retiraría. Desconoce los costes y los planes de Spotify.",
+      "roleNotes": "Personaje ficticio para esta simulación. Tu libro contiene dos voces narrativas y varios apellidos que a menudo se pronuncian mal. Aceptarías escuchar un capítulo de prueba. No has cedido los derechos de audio ni prometido publicar. No hablas en nombre de todos los autores.",
+      "starterQuestion": "¿Qué tendrías que poder corregir antes de firmar con tu nombre?",
+      "brief": "Spotify ha probado en Estados Unidos una herramienta para convertir manuscritos en audiolibros. Ahora te toca defender su siguiente mercado. Añadir otra lengua abre el catálogo, pero una voz que falla con un nombre propio puede convertir a una autora interesada en la primera persona que desaconseje el producto.",
+      "question": "¿Lanzarías en varios países a la vez o empezarías con un grupo pequeño? Decide quién puede frenar una publicación y qué medirías antes de ampliar.",
+      "moves": [
+        "Empezar con un piloto en un mercado",
+        "Abrir varios mercados con revisión de la autora"
+      ],
+      "decision": "El 18 de noviembre Spotify anunció su llegada a 21 mercados adicionales y la creación de audiolibros en español. El flujo dejaba en manos del autor revisar los capítulos, ajustar la pronunciación y aprobar la publicación.",
+      "outcome": "Spotify informó de que más del 60 % de los manuscritos subidos tras el lanzamiento estadounidense llegaron a publicarse. Ese dato correspondía a la experiencia anterior. El anuncio todavía no medía la adopción de la nueva versión en español.",
+      "sources": {
+        "Spotify · Anuncio del 18 de noviembre de 2026": "https://newsroom.spotify.com/2026-11-18/audiobook-creation-tools-expansion/"
+      },
+      "en": {
+        "title": "Who gets the last word on a book’s voice?",
+        "setting": "Product expansion · Spotify · November 2026",
+        "playerRole": "You lead expansion of Spotify’s tools for authors.",
+        "role": "Independent author who publishes in Spanish",
+        "remit": "She is a prospective user. Ask what she would check in her book and when she would pull it. Spotify’s costs and launch plans are outside her remit.",
+        "roleNotes": "Fictional stakeholder in this simulation. Your book has two narrative voices and several frequently mispronounced surnames. You would listen to a trial chapter. You have neither surrendered audio rights nor committed to publishing. Speak only for yourself.",
+        "starterQuestion": "What would you need to be able to fix before putting your name on it?",
+        "brief": "Spotify has tested a manuscript-to-audiobook tool in the US. You must propose the next market. Adding a language could open a new catalogue, but a voice that stumbles on a family name could turn an interested author into the first person to warn others away.",
+        "question": "Would you launch in several countries at once or start with a small group? Decide who can stop publication and what you would measure before expanding.",
+        "moves": [
+          "Pilot in a single market",
+          "Open several markets with author review"
+        ],
+        "decision": "On November 18 Spotify announced availability in 21 additional markets and support for creating Spanish-language audiobooks. Authors could review chapters, adjust pronunciation and approve publication.",
+        "outcome": "Spotify reported that over 60% of manuscripts uploaded after the US rollout had reached publication. That figure describes the earlier experience. The announcement did not yet measure adoption of the new Spanish-language offering.",
+        "sources": {
+          "Spotify · November 18, 2026 announcement": "https://newsroom.spotify.com/2026-11-18/audiobook-creation-tools-expansion/"
+        },
+        "moveDebriefs": [
+          "A pilot lets you catch local mistakes early. A strong result in one country still leaves demand in other markets uncertain.",
+          "Author approval gives creators control. Track how many abandon the review as well, so that availability is not mistaken for adoption."
+        ],
+        "factCheck": {
+          "question": "What did the figure of over 60% measure?",
+          "options": [
+            "Uploaded manuscripts that reached publication after the US launch.",
+            "Spanish manuscripts published in the new markets."
+          ],
+          "correct": 0,
+          "explanation": "Spotify reported the figure from the earlier US experience when it announced the expansion. Results for the new markets were still outstanding."
+        },
+        "scene": {
+          "file": "news-2026-11-spotify-authors-v1-en.mp3",
+          "lines": [
+            {
+              "speaker": "You",
+              "text": "I run Spotify's tools for authors. Before I pick our next market, I've asked an independent author who writes in Spanish to bring in her manuscript."
+            },
+            {
+              "speaker": "Independent author who publishes in Spanish",
+              "text": "Look at this chapter. The grandmother starts it, and her granddaughter finishes it. On the page, you know who's talking. If they sound alike, you lose the joke."
+            },
+            {
+              "speaker": "You",
+              "text": "What if you could hear a sample before signing off?"
+            },
+            {
+              "speaker": "Independent author who publishes in Spanish",
+              "text": "I'd listen to that chapter. Then I'd find the family name. People always get it wrong. If that happens here, can I fix it myself?"
+            }
+          ]
+        }
+      },
+      "moveDebriefs": [
+        "Un piloto te permite escuchar errores locales antes de extenderlos. Un buen resultado en un solo país aún deja abierta la demanda en otros mercados.",
+        "La aprobación de la autora reparte el control. Mide también cuántas abandonan la revisión para no confundir disponibilidad con adopción."
+      ],
+      "factCheck": {
+        "question": "¿Qué medía el dato de más del 60 %?",
+        "options": [
+          "Manuscritos subidos que llegaron a publicarse tras el estreno en EE. UU.",
+          "Manuscritos en español publicados en los nuevos mercados."
+        ],
+        "correct": 0,
+        "explanation": "Spotify publicó la cifra de la experiencia anterior en Estados Unidos al anunciar la expansión. Aún faltaban resultados de los nuevos mercados."
+      },
+      "scene": {
+        "file": "news-2026-11-spotify-authors-v1-es.mp3",
+        "lines": [
+          {
+            "speaker": "Tú",
+            "text": "Llevo en Spotify las herramientas para autores. Antes de decidir dónde lanzarlas, he invitado a una escritora independiente a enseñarme su manuscrito."
+          },
+          {
+            "speaker": "Autora independiente que publica en español",
+            "text": "Mira este capítulo. Lo empieza la abuela y lo termina su nieta. En papel se entiende quién habla. Si al escucharlo suenan iguales, se pierde la gracia."
+          },
+          {
+            "speaker": "Tú",
+            "text": "¿Y si pudieras escuchar una muestra antes de dar el visto bueno?"
+          },
+          {
+            "speaker": "Autora independiente que publica en español",
+            "text": "Escucharía ese capítulo y buscaría el apellido de la familia. Siempre lo pronuncian mal. Si me pasa aquí, ¿puedo corregirlo yo?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "news-2026-11-walmart-delivery",
+      "newsDate": "2026-11-05",
+      "title": "El último kilómetro de un paquete pequeño",
+      "setting": "Operaciones · Walmart · noviembre de 2026",
+      "playerRole": "Decides cómo ampliar las opciones de reparto de Walmart en Estados Unidos.",
+      "role": "Gerente de una tienda Walmart en esta simulación",
+      "remit": "Conoce la preparación de pedidos y lo que su tienda podría asumir. No negocia el contrato nacional con el operador ni representa a los vecinos.",
+      "roleNotes": "El personaje y su tienda son ficticios. En tu tienda, simula que un mismo equipo prepara recogidas y pedidos de envío. No has medido cuántos pedidos urgentes cambiarían de canal. Puedes proponer registrar tiempos de preparación y turnos, pero no inventes costes de vuelo ni cifras de demanda.",
+      "starterQuestion": "Si mañana añadimos otro tipo de envío, ¿qué pedido de hoy podría retrasarse?",
+      "brief": "Walmart y Zipline colaboran en entregas con drones desde 2021. Ahora tienes que justificar la siguiente fase. En un pedido pequeño y urgente importa ganar minutos. Cada opción adicional también compite por el tiempo del equipo que prepara la compra. Un cliente que elige la entrega más rápida quizá habría recogido el mismo pedido de todos modos.",
+      "question": "¿En qué tiendas comenzarías y qué tendría que pasar para que siguieras ampliando? Explica cómo distinguirías un pedido adicional de uno que solo ha cambiado de canal.",
+      "moves": [
+        "Concentrar el servicio en tiendas con demanda conocida",
+        "Comparar tiendas de perfiles distintos antes de ampliarlo"
+      ],
+      "decision": "El 5 de noviembre Walmart anunció un acuerdo plurianual con Zipline para incorporar 300 nuevos puntos de entrega con drones en Estados Unidos.",
+      "outcome": "Cuando anunció el acuerdo, Walmart cifró en más de dos millones las entregas acumuladas de su programa de drones. Esa cifra precede al nuevo despliegue. El anuncio no desglosaba su margen por pedido ni demostraba qué ventas aportarán los 300 puntos.",
+      "sources": {
+        "Walmart · Acuerdo del 5 de noviembre de 2026": "https://corporate.walmart.com/news/2026/11/walmart-expands-drone-delivery-network-with-zipline"
+      },
+      "en": {
+        "title": "The last mile for a small order",
+        "setting": "Operations · Walmart · November 2026",
+        "playerRole": "You decide how to expand Walmart’s US delivery options.",
+        "role": "Walmart store manager in this simulation",
+        "remit": "They know how orders are picked and what their store can handle. They neither negotiate the national operator contract nor speak for the neighborhood.",
+        "roleNotes": "The character and store are fictional. In your simulated store, one team picks both pickup and delivery orders. You have not measured how many urgent orders would switch channels. You can propose observing picking times and shifts. Do not invent flight costs or demand figures.",
+        "starterQuestion": "If we add a delivery option tomorrow, which existing orders could fall behind?",
+        "brief": "Walmart and Zipline have worked on drone delivery since 2021. You must make the case for the next phase. Minutes matter on a small urgent order. Every new option also competes for the time of the team picking the goods. A customer choosing the fastest delivery might otherwise have collected the same order.",
+        "question": "Where would you start, and what would justify expanding further? Explain how you would distinguish an additional order from one that simply moved to another channel.",
+        "moves": [
+          "Concentrate on stores with known demand",
+          "Compare different store profiles before scaling"
+        ],
+        "decision": "On November 5 Walmart announced a multi-year agreement with Zipline to add 300 drone delivery sites in the US.",
+        "outcome": "At the announcement, Walmart reported more than two million deliveries across its drone program to date. That figure precedes the new rollout. The release did not give margins per order or establish how much incremental revenue the 300 sites would generate.",
+        "sources": {
+          "Walmart · November 5, 2026 agreement": "https://corporate.walmart.com/news/2026/11/walmart-expands-drone-delivery-network-with-zipline"
+        },
+        "moveDebriefs": [
+          "Familiar stores make launch easier. If those stores already outperformed, compare their change with the change at similar stores.",
+          "Testing different stores helps expose variations in demand. Decide which store differences to measure before explaining the results."
+        ],
+        "factCheck": {
+          "question": "What do the more than two million deliveries represent?",
+          "options": [
+            "An annual forecast for the 300 new sites.",
+            "Cumulative program deliveries before the expansion."
+          ],
+          "correct": 1,
+          "explanation": "Walmart reported the historical total alongside the new agreement. Evaluating the expansion will require deliveries from those sites after they open."
+        },
+        "scene": {
+          "file": "news-2026-11-walmart-delivery-v1-en.mp3",
+          "lines": [
+            {
+              "speaker": "You",
+              "text": "I'm at the pickup counter in a Walmart store. I have to decide where to expand drone delivery, so I've asked the store manager to walk me through an order."
+            },
+            {
+              "speaker": "Walmart store manager in this simulation",
+              "text": "See that car pulling up? The person taking those groceries outside is the same person who'd pack your drone order."
+            },
+            {
+              "speaker": "You",
+              "text": "If that customer picks the drone tomorrow, how do we know whether they would've driven over anyway?"
+            },
+            {
+              "speaker": "Walmart store manager in this simulation",
+              "text": "Right now, I couldn't tell you. I can keep track during my shift. What should I watch for, especially when there's a line?"
+            }
+          ]
+        }
+      },
+      "moveDebriefs": [
+        "Las tiendas conocidas facilitan el arranque. Si ya estaban por encima de la media, compara el cambio de cada tienda con el de otra parecida.",
+        "Probar tiendas distintas ayuda a descubrir dónde cambia la demanda. Define qué diferencias entre tiendas medirás antes de interpretar el resultado."
+      ],
+      "factCheck": {
+        "question": "¿Qué representan los más de dos millones de entregas?",
+        "options": [
+          "La previsión anual para los 300 nuevos puntos.",
+          "Las entregas acumuladas del programa antes de la ampliación."
+        ],
+        "correct": 1,
+        "explanation": "Walmart comunicó un total histórico junto al nuevo acuerdo. Para evaluar la ampliación harán falta las entregas de esos puntos después de abrir."
+      },
+      "scene": {
+        "file": "news-2026-11-walmart-delivery-v1-es.mp3",
+        "lines": [
+          {
+            "speaker": "Tú",
+            "text": "Estoy en la zona de recogidas de un Walmart. Me toca decidir dónde ampliar el reparto con drones y he venido a preguntarle a la gerente cómo prepara un pedido."
+          },
+          {
+            "speaker": "Gerente de una tienda Walmart en esta simulación",
+            "text": "Mira, ahí viene un coche. Quien sale a llevarle la compra es la misma persona que prepararía tu paquete para el dron."
+          },
+          {
+            "speaker": "Tú",
+            "text": "Y si ese cliente mañana elige el dron, ¿cómo sabemos si antes habría venido en coche?"
+          },
+          {
+            "speaker": "Gerente de una tienda Walmart en esta simulación",
+            "text": "Ahora mismo no lo sé. Puedo apuntar lo que pasa en mi turno. Dime qué tendría que mirar, sobre todo cuando se junta la gente."
+          }
+        ]
+      }
+    }
+  ]
+}

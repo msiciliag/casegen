@@ -24,9 +24,57 @@
       "Google · Refunds and saved games": "https://support.google.com/stadia/answer/12790109",
       "Google · Using the controller after shutdown": "https://support.google.com/stadia/answer/13067284"
     },
-    "role": "Player support lead",
-    "roleNotes": "Players need the servers to access their libraries. I care about what we tell them about their purchases."
+    "role": "Stadia player support lead",
+    "roleNotes": "In this simulation support distinguishes game purchases, subscription time and controllers. Moving progress requires each publisher to accept the data. We can contact store purchasers but cannot promise progress is portable across all games. I do not have next year’s budget.",
+    "playerRole": "Stadia product lead",
+    "remit": "A colleague on the support team. She understands which purchases are at stake and how changes reach players. You recommend whether to keep funding the service and what protections to offer.",
+    "starterQuestion": "Which support cases would be hard to resolve if the service changes?",
+    "moves": [
+      "Fund an extension with a review date",
+      "Plan a wind-down with player protections"
+    ],
+    "moveDebriefs": [
+      "An extension buys time to test adoption. Set the usage threshold that would justify another round of infrastructure spending.",
+      "A wind-down limits future commitments. Your promise to players still has to address purchases, controllers and saves that depend on publishers."
+    ],
+    "scene": {
+      "file": "stadia-v1-en.mp3",
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "A reconstruction. September, twenty twenty-two. You run product at Stadia. Fewer people are using the cloud gaming service than the team expected. Management wants you to make the case for another year's funding or explain how you'd wind it down. First you meet the player support lead. She handles player questions. The budget decision is yours to recommend."
+        },
+        {
+          "speaker": "Stadia player support lead",
+          "text": "Picture someone who bought a game yesterday and has a campaign in progress. Can they still open the game? Can they keep that save? What can they do with the controller? Those are three separate questions, and some answers depend on the publisher. What should we pin down before we make a promise?"
+        }
+      ]
+    }
   },
-  "role": "Responsable de atención al jugador",
-  "roleNotes": "Los jugadores necesitan los servidores para acceder a sus bibliotecas. Me preocupa qué les decimos sobre sus compras."
+  "role": "Responsable de soporte de Stadia",
+  "roleNotes": "En esta simulación, el equipo distingue juegos digitales, tiempo de suscripción y mandos. Una transferencia de progreso depende de que cada editor pueda recibir esos datos. Podemos contactar a los compradores de la tienda, pero no prometerles que todo su progreso sea portable. No conozco el presupuesto para un año más.",
+  "playerRole": "Responsable de producto de Stadia",
+  "remit": "Es una colega del equipo de atención. Conoce las compras que pueden verse afectadas y cómo comunicar los cambios. Tú decides si recomendar financiación y qué protección ofrecer.",
+  "starterQuestion": "¿Qué casos de soporte serían difíciles de resolver si cambiamos el servicio?",
+  "moves": [
+    "Financiar una prórroga con una fecha de revisión",
+    "Preparar una retirada con protección para los jugadores"
+  ],
+  "moveDebriefs": [
+    "Una prórroga da tiempo a probar si crece el uso. Define antes qué nivel de adopción justificaría seguir pagando la infraestructura.",
+    "Una retirada limita compromisos futuros, pero tu promesa a los jugadores debe cubrir juegos, mandos y partidas que dependen de los editores."
+  ],
+  "scene": {
+    "file": "stadia-v1-es.mp3",
+    "lines": [
+      {
+        "speaker": "Narración",
+        "text": "Recreación. Septiembre de dos mil veintidós. Diriges producto en Stadia. La adopción del servicio de juegos en la nube está por debajo de las expectativas. Dirección te pide que defiendas el presupuesto para el año que viene o propongas cómo retirarte. Antes de decidir te reúnes con la responsable de soporte. Ella habla con jugadores, pero no decide el presupuesto."
+      },
+      {
+        "speaker": "Responsable de soporte de Stadia",
+        "text": "Piensa en alguien que compró ayer un juego y ya lleva una campaña a medias. Me preguntará si podrá abrirlo, si conservará su partida y qué hará con el mando. Son tres preguntas distintas. Para algunas dependemos del editor. ¿Qué necesitas aclarar antes de hacerle una promesa?"
+      }
+    ]
+  }
 }

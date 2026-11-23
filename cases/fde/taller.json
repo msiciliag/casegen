@@ -15,9 +15,57 @@
     "decision": "Run alerts silently for two shifts and compare them with operators’ notes. Pilot one line, suppress agreed cleaning windows, and give one person responsibility for acknowledging each alert.",
     "outcome": "Measure jams caught in time and nuisance alerts per shift. If alerts fall but more jams go undetected, return to silent mode.",
     "sources": {},
-    "role": "Shift lead",
-    "roleNotes": "My team knows when each line is cleaned. I need someone accountable for each alert."
+    "role": "Night shift supervisor",
+    "roleNotes": "Cleaning starts are recorded on a whiteboard and sometimes run late against schedule. An operator checks the line before calling maintenance about a jam. For two shifts I can have them record a reason for each stop, but I cannot change the PLC.",
+    "playerRole": "Plant field engineer",
+    "remit": "He gets the call when the line stops. He knows who cleans, who acknowledges an alert and what would make him mute the phone. The director sets the pilot’s resources.",
+    "starterQuestion": "How do you tell cleaning from a jam at three in the morning today?",
+    "moves": [
+      "Run silent alerts for two shifts",
+      "Trial human confirmation on one line"
+    ],
+    "moveDebriefs": [
+      "Silent alerts let you count false alarms without waking the crew. Someone must continue detecting real jams throughout the trial.",
+      "Human confirmation can filter out cleaning. An unowned alert may sit unanswered, so measure the time to acknowledgment."
+    ],
+    "scene": {
+      "file": "taller-v1-en.mp3",
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "It's the night shift at the packaging plant. One line has stopped. From the doorway you can see maintenance cleaning the machine, but pulses keep coming in on the screen. The night supervisor waves you over."
+        },
+        {
+          "speaker": "Night shift supervisor",
+          "text": "The director wants this thing sending alerts to my phone in ten days. Fine by me. But if it wakes me up for another cleaning job, I'm muting it. You can read the signals on both lines. The time the cleaners actually start goes up on that whiteboard. What do you need to see tonight?"
+        }
+      ]
+    }
   },
-  "role": "Jefe de turno",
-  "roleNotes": "Mi equipo sabe cuándo limpia cada línea. Solo aceptaré avisos si alguien se responsabiliza de atenderlos."
+  "role": "Jefe del turno de noche",
+  "roleNotes": "El inicio de limpieza se apunta en una pizarra y a veces se retrasa respecto al horario. Un operario comprueba la línea antes de llamar a mantenimiento por un atasco. Puedo hacer que anoten el motivo junto a cada parada durante dos turnos, pero no cambiar el PLC.",
+  "playerRole": "Ingeniera de campo en planta",
+  "remit": "Recibe la llamada cuando la línea se para. Sabe quién limpia, quién acusa recibo y qué avisos harían que silenciase el teléfono. El director fija los recursos para el piloto.",
+  "starterQuestion": "¿Cómo distingues hoy una limpieza de un atasco a las tres de la mañana?",
+  "moves": [
+    "Ensayar avisos silenciosos durante dos turnos",
+    "Probar la confirmación humana en una sola línea"
+  ],
+  "moveDebriefs": [
+    "Los avisos silenciosos permiten contar falsos positivos sin despertar al turno. Durante el ensayo alguien debe seguir detectando los atascos reales.",
+    "La confirmación humana filtra limpiezas, aunque una alarma sin responsable podría quedarse esperando. Mide minutos hasta que alguien responda."
+  ],
+  "scene": {
+    "file": "taller-v1-es.mp3",
+    "lines": [
+      {
+        "speaker": "Narración",
+        "text": "Es de noche en la fábrica de envases. Una de las líneas está parada. Desde la puerta ves a mantenimiento limpiando la máquina, pero en la pantalla siguen entrando pulsos. El jefe de turno te invita a acercarte."
+      },
+      {
+        "speaker": "Jefe del turno de noche",
+        "text": "El director quiere que esto me avise al móvil dentro de diez días. Por mí, bien. Pero si me despierta otra vez porque alguien está limpiando, lo silencio. Puedes leer las señales de las dos líneas. La hora a la que empiezan a limpiar la apuntamos en esa pizarra. ¿Qué necesitas ver esta noche?"
+      }
+    ]
+  }
 }

@@ -24,6 +24,9 @@ void main() {
       expect(find.text('Settings'), findsOneWidget);
       await tester.pageBack();
       await tester.pumpAndSettle();
+      expect(find.text('The lead story'), findsOneWidget);
+      await tester.tap(find.text('Archive'));
+      await tester.pumpAndSettle();
       expect(find.text('What is an uninterrupted hour worth?'), findsOneWidget);
       expect(find.text('Profile'), findsOneWidget);
       appLanguage.value = 'es';

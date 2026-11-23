@@ -15,9 +15,57 @@
     "decision": "Choose one variety and the two available warehouses. Reconcile the latest physical count against subsequent movements. Convert only lots with a known weight and show the remainder in their original units.",
     "outcome": "Compare two orders with what dispatch could actually prepare. A partial total with explicit coverage gives sales a defensible limit and tells the other warehouses exactly which data are missing.",
     "sources": {},
-    "role": "Cooperative manager",
-    "roleNotes": "Two warehouse leads are available before Monday. I need to know what stock I can promise."
+    "role": "Manager handling supermarket orders",
+    "roleNotes": "I can negotiate a guaranteed minimum and confirm extra volume later. One available warehouse records weight by lot. The other counts boxes and keeps its last weigh-in on paper. I will not convert all boxes using an average weight to make a binding commitment.",
+    "playerRole": "Cooperative field engineer",
+    "remit": "She sponsors the project and decides what to promise on Monday. She can bring in two warehouse leads. You need their records to verify weights.",
+    "starterQuestion": "What could you promise on Monday if some warehouses are still unreconciled?",
+    "moves": [
+      "Offer a verified stock floor",
+      "Reserve by lot and confirm after weighing"
+    ],
+    "moveDebriefs": [
+      "A verified floor lowers the risk of overselling. Show sales which lots are pending so it can expand the order when weights arrive.",
+      "Lot reservations keep negotiations open. Agree when a reservation expires and who releases stock if the weigh-in falls short."
+    ],
+    "scene": {
+      "file": "cooperativa-v1-en.mp3",
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "The supermarket buyers are coming on Monday. In the cooperative office, the manager pulls up a chair and hands you two warehouse slips. Both count boxes. Only one gives the weight of the fruit when it arrived."
+        },
+        {
+          "speaker": "Cooperative manager",
+          "text": "The buyer doesn't care how many boxes I've got. She'll ask how many kilos I can put on a truck. Once I give her my word, she'll count on that fruit being there. We've got six warehouses, and you'll only catch two of the supervisors before the meeting. What do you want to ask them when I get them on the phone?"
+        }
+      ]
+    }
   },
-  "role": "Gerente de la cooperativa",
-  "roleNotes": "Dos encargados están disponibles antes del lunes. Necesito saber qué existencias puedo prometer."
+  "role": "Gerente que negocia los pedidos",
+  "roleNotes": "Puedo negociar un mínimo garantizado y confirmar volumen adicional más tarde. Uno de los dos almacenes accesibles registra peso por lote; el otro anota cajas y guarda el último pesaje en papel. No aceptaré convertir todas las cajas con un peso medio si afecta a una cantidad comprometida.",
+  "playerRole": "Ingeniero de campo de la cooperativa",
+  "remit": "Es tu patrocinadora comercial. Puede decidir qué cantidad prometer el lunes y convocar a dos almacenes. Para verificar pesos necesitas los registros de sus encargados.",
+  "starterQuestion": "¿Qué podría prometerse el lunes si quedan almacenes sin conciliar?",
+  "moves": [
+    "Ofrecer un mínimo de stock verificado",
+    "Reservar por lotes y confirmar después del pesaje"
+  ],
+  "moveDebriefs": [
+    "Un mínimo verificable reduce el riesgo de prometer fruta inexistente. Explica qué lotes quedan pendientes para que ventas pueda ampliar el pedido.",
+    "Reservar lotes mantiene abierta la negociación. Acuerda cuándo vence la reserva y quién libera mercancía si el pesaje queda corto."
+  ],
+  "scene": {
+    "file": "cooperativa-v1-es.mp3",
+    "lines": [
+      {
+        "speaker": "Narración",
+        "text": "El lunes vienen los compradores del supermercado. En la oficina de la cooperativa, la gerente te hace sitio y te enseña dos partes de almacén. Los dos dicen cajas. Solo uno dice cuánto pesaba la fruta cuando entró."
+      },
+      {
+        "speaker": "Gerente de la cooperativa",
+        "text": "Al comprador le da igual cuántas cajas tengo. Me va a preguntar cuántos kilos le puedo mandar. Y si le doy mi palabra, va a contar con ellos. Tengo seis almacenes, pero antes de la reunión solo vas a pillar a dos encargados. Cuando los llame, ¿qué quieres preguntarles?"
+      }
+    ]
+  }
 }

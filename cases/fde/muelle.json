@@ -15,9 +15,57 @@
     "decision": "Shadow a shift and time arrivals through bay assignment. Pilot one bay with a booking list showing refresh time and reservation ID. Have a person confirm ambiguous matches and keep the printed sheet as a fallback.",
     "outcome": "Compare waiting times by time slot alongside the number of trucks served. If waits fall at the pilot bay but rise at the other seven, revisit allocation before expanding.",
     "sources": {},
-    "role": "Yard dispatcher",
-    "roleNotes": "I can spend two shifts with you. I cannot change the ERP export."
+    "role": "Morning yard dispatcher",
+    "roleNotes": "Drivers usually have a booking reference on the delivery note. If it is missing, I call the carrier and pencil the time on the shift sheet. The CSV does not record that call. Late bookings added by the night shift can be missing from the printout.",
+    "playerRole": "Field engineer at the port",
+    "remit": "He sends each truck to a bay. He can walk you through the shift sheet and what he accepts as proof of a booking. The yard manager approves process changes.",
+    "starterQuestion": "When a plate does not match, what do you check before assigning a bay?",
+    "moves": [
+      "Pilot a live booking list at one bay",
+      "First measure waiting times with the dispatcher"
+    ],
+    "moveDebriefs": [
+      "A live list brings shift changes to the dispatcher. CSV age still matters when an ambiguous booking reaches the gate.",
+      "Measuring first helps locate the bottleneck. Name the decision the dispatcher can make on Friday with the resulting log."
+    ],
+    "scene": {
+      "file": "muelle-v1-en.mp3",
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "It's six at the port. Eight loading bays are opening and a driver is already at the window, delivery slip in hand. The morning dispatcher slides last night's printout toward you. There is a handwritten note next to one booking."
+        },
+        {
+          "speaker": "Morning yard dispatcher",
+          "text": "Look at that plate. We get three different hauliers coming in with it. This printout comes from a file that updates every half hour. My boss wants a queue forecast by Friday. Right now I've got this driver standing here. What do you need to see before I send him to a bay?"
+        }
+      ]
+    }
   },
-  "role": "Despachador de patio",
-  "roleNotes": "Puedo acompañarte dos jornadas. No puedo modificar la exportación del ERP."
+  "role": "Despachador del turno de mañana",
+  "roleNotes": "El conductor suele traer la referencia de reserva en el albarán. Cuando falta, llamo al transportista y dejo anotada la hora en una esquina de la hoja. El CSV no conserva esa llamada. Si el turno de noche añade una cita a mano, empieza el día fuera del listado impreso.",
+  "playerRole": "Ingeniera de campo en el puerto",
+  "remit": "Es quien envía cada camión a un muelle. Puede enseñarte la hoja del turno y explicar qué dato acepta para asignar una cita. Su jefa aprueba cambios en la operación.",
+  "starterQuestion": "Cuando una matrícula no coincide, ¿qué haces antes de asignar el muelle?",
+  "moves": [
+    "Pilotar una lista viva en un solo muelle",
+    "Medir primero las esperas con el despachador"
+  ],
+  "moveDebriefs": [
+    "Una lista viva acerca los cambios de turno al despachador. La antigüedad del CSV sigue importando cuando se asigna una cita dudosa.",
+    "Medir primero ayuda a localizar el cuello de botella. Decide qué decisión podrá tomar el despachador el viernes con ese registro."
+  ],
+  "scene": {
+    "file": "muelle-v1-es.mp3",
+    "lines": [
+      {
+        "speaker": "Narración",
+        "text": "Son las seis en el puerto. Abren los ocho muelles y ya hay un conductor con el albarán en la mano. El despachador del turno de mañana te acerca la lista que imprimieron anoche. Al lado de una cita hay una nota a bolígrafo."
+      },
+      {
+        "speaker": "Despachador del turno de mañana",
+        "text": "Mira la matrícula. La usan tres transportistas distintos. Y esta hoja sale de un fichero que cambia cada media hora. Mi jefa me pide para el viernes una previsión de las colas. Yo ahora tengo a este hombre delante. ¿Qué necesitas ver antes de que lo mande a un muelle?"
+      }
+    ]
+  }
 }

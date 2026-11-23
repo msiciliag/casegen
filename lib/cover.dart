@@ -21,7 +21,33 @@ class Cover extends CustomPainter {
         final u = (x - size.width / 2) / size.height;
         final v = (y - size.height / 2) / size.height;
         double fill;
-        if (id == 'mulan') {
+        if (id.endsWith('-netflix-comedy')) {
+          final capsule = u.abs() < .13 && v > -.37 && v < .09;
+          final grille = capsule && (v * 18).floor().isEven;
+          final cradle =
+              v >= .02 && v < .23 && ((u * u + v * v) - .045).abs() < .012;
+          final stand =
+              (u.abs() < .026 && v > .18 && v < .38) ||
+              (v > .35 && v < .39 && u.abs() < .15);
+          final rays =
+              u.abs() > .38 && ((u.abs() - .45) * 3.4 - v.abs()).abs() < .05;
+          fill = grille || cradle || stand || rays ? 1 : .09;
+        } else if (id.endsWith('-spotify-authors')) {
+          final spread =
+              u.abs() < .62 &&
+              v.abs() < .3 &&
+              v + .12 * u.abs() < .25 &&
+              v + .3 * u.abs() > -.32;
+          final pageLines = ((v + .3 * u.abs()) * 12).floor().isEven;
+          fill = spread && (pageLines || u.abs() < .03) ? 1 : .09;
+        } else if (id.endsWith('-walmart-delivery')) {
+          final box = u.abs() < .18 && v > .05 && v < .36;
+          final rotor = (v + .2).abs() < .04 && (u.abs() - .37).abs() < .21;
+          final arm = (v + .09).abs() < .035 && u.abs() < .4;
+          fill = box || rotor || arm || (u.abs() < .035 && v.abs() < .15)
+              ? 1
+              : .09;
+        } else if (id == 'mulan') {
           final strip = (v + u * .38).abs();
           fill = strip < .34 && !(strip > .22 && (u * 6).floor().isEven)
               ? 1

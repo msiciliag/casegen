@@ -15,9 +15,57 @@
     "decision": "Download minimal lists and assign tickets to gates using a visible rule. Log each admission on its assigned device. Send exceptions to a desk with one master list. Rehearse loss of connectivity and a scanner change.",
     "outcome": "Track queues and exceptions during the first rush. If scanners are swapped without transferring their logs, switch that gate to manual checks until the records are reconciled.",
     "sources": {},
-    "role": "Admissions lead",
-    "roleNotes": "I only have four phones and half an hour to rehearse. Reception fails at the gates."
+    "role": "Admissions lead for both gates",
+    "roleNotes": "Each person has a separate code even when one phone holds all the tickets. Both gates send exceptions to one shared desk with a printed list and one staffer. Sending half the crowd there would overwhelm it.",
+    "playerRole": "Field engineer for admissions",
+    "remit": "She runs both scanning teams and can describe queues and exceptions. The promoter decides how much duplicate-entry risk to accept.",
+    "starterQuestion": "What happens when one phone holds several tickets?",
+    "moves": [
+      "Assign tickets to gates before opening",
+      "Centralize validation and use two entry lanes"
+    ],
+    "moveDebriefs": [
+      "Splitting the list allows offline checks. A group holding tickets for different gates will need clear directions and a workable exception lane.",
+      "A single register prevents both gates accepting the same code. Test its throughput and rehearse what happens if that station fails."
+    ],
+    "scene": {
+      "file": "gira-v1-en.mp3",
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "You've got half an hour to rehearse. At the festival entrance, the woman running both gates hands you a phone. You scan a test ticket. By the time you walk to the other gate, the signal has dropped."
+        },
+        {
+          "speaker": "Admissions lead",
+          "text": "That happens with a crowd here too. Tonight we're expecting twelve hundred people. Say we scan that code here and a minute later someone shows a screenshot at the other gate. I've got four phones, about three hours of battery and one desk for problems. What would you like us to try while the gates are still empty?"
+        }
+      ]
+    }
   },
-  "role": "Responsable de accesos",
-  "roleNotes": "Solo dispongo de cuatro teléfonos y media hora para un ensayo. La cobertura falla en las puertas."
+  "role": "Responsable de las dos puertas",
+  "roleNotes": "En la lista cada persona tiene su propio código aunque todos los códigos estén en un mismo móvil. Cuando hay dudas, enviamos al grupo a una mesa que comparten ambas puertas. Esa mesa tiene una copia impresa y un encargado; si remitimos medio aforo, se atascará.",
+  "playerRole": "Ingeniero de campo de taquilla",
+  "remit": "Organiza a los equipos que validan entradas. Conoce las colas y las excepciones que puede gestionar. El promotor decide cuánto riesgo de doble acceso acepta.",
+  "starterQuestion": "¿Qué pasa si alguien lleva varias entradas en un solo teléfono?",
+  "moves": [
+    "Repartir las entradas entre puertas de antemano",
+    "Centralizar la validación y usar dos carriles de entrada"
+  ],
+  "moveDebriefs": [
+    "Dividir la lista permite validar sin red, pero alguien con entradas para dos puertas necesitará instrucciones y un circuito de excepción.",
+    "Un único registro evita que dos puertas acepten el mismo código. Pon a prueba el ritmo de validación y ensaya qué pasa si falla ese puesto."
+  ],
+  "scene": {
+    "file": "gira-v1-es.mp3",
+    "lines": [
+      {
+        "speaker": "Narración",
+        "text": "Falta media hora para terminar el ensayo. En la entrada del festival te recibe la responsable de las dos puertas. Te pasa un móvil. Lees una entrada de prueba. Al caminar hasta la otra puerta, te desaparece la cobertura."
+      },
+      {
+        "speaker": "Responsable de accesos",
+        "text": "Eso mismo nos pasa con público. Y esta noche vienen mil doscientas personas. Imagínate que escaneamos ese código aquí y un minuto después alguien enseña una captura en la otra puerta. Tengo cuatro móviles, unas tres horas de batería y una mesa para las dudas. ¿Qué quieres que ensayemos mientras aún tenemos las puertas vacías?"
+      }
+    ]
+  }
 }

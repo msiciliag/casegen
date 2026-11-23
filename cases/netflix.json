@@ -22,9 +22,57 @@
       "Netflix · US launch terms": "https://about.netflix.com/en/news/announcing-basic-with-ads-us",
       "Netflix · The first six months": "https://about.netflix.com/en/news/netflix-2023-upfront-building-a-forever-business"
     },
-    "role": "Commercial lead",
-    "roleNotes": "I care about new subscribers and downgrades. I have no confirmed ad revenue forecast."
+    "role": "Netflix advertising lead",
+    "roleNotes": "In this simulation, an agency wants to forecast its weekly impressions but has not guaranteed a minimum buy. To compare plans I need net ad revenue per viewing hour, viewing hours and downgrades. I have neither viewer interviews nor a confirmed ad rate.",
+    "playerRole": "Netflix pricing lead",
+    "remit": "An internal colleague at Netflix. She can explain what advertisers would buy and how to measure revenue. Viewers’ willingness to pay would need separate customer research.",
+    "starterQuestion": "What would you need to measure before recommending more ad minutes?",
+    "moves": [
+      "Test a small discount with a light ad load",
+      "Test a lower entry price with more ads"
+    ],
+    "moveDebriefs": [
+      "A light ad load protects viewing time. With a small discount, you need to measure how many new subscribers actually join.",
+      "A low entry price can reach more households. Check whether ad revenue covers both the discount and downgrades from higher tiers."
+    ],
+    "scene": {
+      "file": "netflix-v1-en.mp3",
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "A reconstruction. Summer, twenty twenty-two. You're in an internal meeting at Netflix. You set subscription prices. Your colleague from advertising joins you. She deals with the agencies that would buy ads on the new plan. Two cells in your spreadsheet are empty: what a viewer will pay, and how much advertising they'll sit through."
+        },
+        {
+          "speaker": "Netflix advertising lead",
+          "text": "Look, put three breaks in that cell and I can try to sell three breaks. Getting an agency to buy all three is another matter. And when a household switches from a plan they already pay for, that discount is real. Before you take a price to management, what do you need from my side?"
+        }
+      ]
+    }
   },
-  "role": "Responsable comercial",
-  "roleNotes": "Me preocupan tanto las nuevas altas como las bajadas de plan. No tengo una previsión confirmada de ingresos por anuncios."
+  "role": "Responsable de publicidad de Netflix",
+  "roleNotes": "En esta simulación, una agencia pide prever cuántas impresiones podrá comprar cada semana; todavía no ha firmado un volumen mínimo. Para comparar planes necesito el ingreso publicitario neto por hora vista, las horas vistas y los cambios desde planes más caros. No tengo entrevistas a espectadores ni una tarifa publicitaria confirmada.",
+  "playerRole": "Responsable de precios de Netflix",
+  "remit": "Trabaja contigo dentro de Netflix. Puede explicar qué compraría un anunciante y cómo medir los ingresos. Para saber qué pagarían los espectadores tendrías que investigarlo con ellos.",
+  "starterQuestion": "¿Qué necesitarías medir antes de recomendar más minutos de anuncios?",
+  "moves": [
+    "Probar una rebaja pequeña con pocos anuncios",
+    "Probar un precio de entrada más bajo con más anuncios"
+  ],
+  "moveDebriefs": [
+    "Con pocos anuncios proteges la experiencia de visionado. El pequeño descuento exige comprobar cuántas altas realmente atrae.",
+    "Un precio bajo abre la puerta a más hogares. Mide si los anuncios compensan tanto el descuento como las bajadas desde planes más caros."
+  ],
+  "scene": {
+    "file": "netflix-v1-es.mp3",
+    "lines": [
+      {
+        "speaker": "Narración",
+        "text": "Recreación. Verano de dos mil veintidós. Estás en una reunión interna de Netflix. Tú llevas precios. Entra tu compañera de publicidad. Habla con las agencias que comprarían los anuncios del nuevo plan. En la mesa hay dos huecos por rellenar: cuánto pagará el espectador y cuánto tiempo pasará viendo publicidad."
+      },
+      {
+        "speaker": "Responsable de publicidad de Netflix",
+        "text": "Mira, si apuntas tres pausas en la hoja, puedo salir a vender tres pausas. Que una agencia las compre todas es otra historia. Y si una familia que ya paga Netflix se pasa al plan barato, esa rebaja sí la conocemos. Antes de llevarle un precio a dirección, ¿qué necesitas saber de mi lado?"
+      }
+    ]
+  }
 }

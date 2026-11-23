@@ -15,9 +15,57 @@
     "decision": "Start at the archivists’ internal workstation. Search by municipality, alias and date, and show the scan and shelf mark. Hold back queries in each language so your evaluation uses requests you did not tune on.",
     "outcome": "Measure time to find the deed and searches that end at the wrong document. If only printed records improve, document the coverage and keep manual lookup for handwritten deeds.",
     "sources": {},
-    "role": "Municipal archivist",
-    "roleNotes": "I can verify shelf marks during the pilot. The old requests have verified references."
+    "role": "Archivist on the reference desk",
+    "roleNotes": "I check the shelf mark, then the name on the original scan. Two towns in the sample have similar historical names. When unsure, I ask for an approximate year. Only the two archivists can verify the forty known references on our internal network.",
+    "playerRole": "Field engineer assigned to the archive",
+    "remit": "She finds and verifies deeds every day. She can show difficult requests and check references. The municipality authorizes any public access.",
+    "starterQuestion": "How do you know a search found the right deed?",
+    "moves": [
+      "Start with a staff search tool",
+      "Pilot a manual place-name index first"
+    ],
+    "moveDebriefs": [
+      "An internal search tool leaves verification with the archivists. Count wrong documents as well as minutes saved.",
+      "A manual index can cover names across languages. Estimate what two people can maintain and how missing variants will surface."
+    ],
+    "scene": {
+      "file": "archivo-v1-en.mp3",
+      "lines": [
+        {
+          "speaker": "Narrator",
+          "text": "At the town archives, a visitor remembers the old name of her village, but not the year on the deed. You have until Friday to put together a demo. When the visitor leaves, the archivist turns her monitor toward you."
+        },
+        {
+          "speaker": "Reference desk archivist",
+          "text": "If I type that name, I get two different villages. See that handwriting in the margin? Sometimes the only way to tell which one they meant is to look at the scan. We can pull up a few old requests together. The scans have to stay here on the council network. Which one shall we open first?"
+        }
+      ]
+    }
   },
-  "role": "Archivera municipal",
-  "roleNotes": "Puedo validar signaturas durante la prueba. Las consultas antiguas incluyen referencias correctas."
+  "role": "Archivera que atiende las consultas",
+  "roleNotes": "Compruebo la signatura y luego el nombre en la imagen original. En los ejemplos hay dos municipios con topónimos históricos muy parecidos. Cuando dudo, pido al lector el año aproximado. Las cuarenta referencias correctas solo las pueden revisar las dos archiveras en la red interna.",
+  "playerRole": "Ingeniera de campo asignada al archivo",
+  "remit": "Es quien busca y verifica las escrituras a diario. Puede enseñarte consultas difíciles y comprobar referencias. La autorización para exponer datos al público corresponde al municipio.",
+  "starterQuestion": "¿Qué señal te dice que has encontrado la escritura correcta?",
+  "moves": [
+    "Empezar por un buscador para archiveras",
+    "Probar primero un índice manual de topónimos"
+  ],
+  "moveDebriefs": [
+    "Un buscador interno deja la verificación en manos de las archiveras. Cuenta los documentos equivocados además del tiempo que ahorra.",
+    "Un índice manual puede cubrir nombres que cambian de idioma. Calcula cuántas variantes pueden mantener dos personas y cómo verás qué falta."
+  ],
+  "scene": {
+    "file": "archivo-v1-es.mp3",
+    "lines": [
+      {
+        "speaker": "Narración",
+        "text": "En el mostrador del archivo municipal, una mujer recuerda el nombre antiguo de su pueblo, pero no el año de la escritura. Estás aquí para preparar la demostración del viernes. Cuando la lectora se marcha, la archivera gira el monitor hacia ti."
+      },
+      {
+        "speaker": "Archivera de consultas",
+        "text": "Si tecleo ese nombre, me salen dos pueblos distintos. ¿Ves la letra en el margen? A veces tengo que volver a la imagen para saber de cuál estamos hablando. Podemos mirar juntas algunas consultas antiguas. Los escaneos se quedan aquí, en la red del ayuntamiento. ¿Cuál quieres que abra primero?"
+      }
+    ]
+  }
 }

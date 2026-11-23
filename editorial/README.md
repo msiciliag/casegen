@@ -1,0 +1,12 @@
+# Publish a news case
+
+The mobile app ships with the Spanish and English edition in `feed.json`. Its refresh action fetches this same file from the casegen repository’s `main` branch. An edition that passes validation replaces the local cache in a single transaction. Until the next refresh, players can use the last valid edition offline.
+
+The [meeting audio guide](VOICES.md) covers the two-voice cast, local rendering and updating a recording.
+
+1. Copy an existing entry. Give the story a permanent `news-` ID and set `newsDate` to the date of the underlying report, in YYYY-MM-DD format. A correction to the same decision keeps its ID.
+2. Write the brief using only information the player could have had at decision time. In both languages identify the player's job, their contact, what that contact can know and two defensible opening moves. For each move, write one concrete trade-off in the matching position of `moveDebriefs`, in both languages. The contact is a simulated character. Keep the answer and all subsequent events out of the interview notes.
+3. Document the actual decision and the result separately. For a fresh announcement, date what is known and state which consequences have yet to be measured. Link to the original announcement in both versions using the same HTTPS URL. An optional bilingual `factCheck` asks what the source actually establishes. Give it two distinct options, the same zero-based `correct` index for both languages, and a short explanation that the source supports. Add a dated update when evidence on the outcome becomes available.
+4. To include a meeting, add a `scene` in each language with its MP3 filename and an ordered transcript of speaker and text pairs. Keep the script before the decision. Use invented speakers and identify the dramatization. Store the two MP3s in `editorial/audio/` using the case ID, a version and a language, e.g. `news-2026-11-netflix-comedy-v1-es.mp3`. Use a new filename for a correction and keep old recordings available for saved games. The release bundles existing recordings for offline use. Installed players can stream a later recording on demand and can read its transcript offline.
+5. Increment the positive integer `revision` for every published change, including corrections. The entire JSON document must fit in 512 KiB.
+6. Run `flutter test test/news_test.dart` before merging the change to `main`. Mobile clients can then receive the edition without an APK or App Store release. GitHub’s raw content cache may delay an update by a few minutes.
