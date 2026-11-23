@@ -1,7 +1,7 @@
 name: casegen
 description: Decisiones empresariales reales para practicar en el móvil.
 publish_to: none
-version: 0.3.0+4
+version: 0.3.1+5
 environment:
   sdk: ^3.11.0
 dependencies:

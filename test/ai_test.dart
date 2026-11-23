@@ -60,6 +60,39 @@ void main() {
     },
   );
   test(
+    'La conexión antigua de Groq conserva su clave al cambiar de modelo',
+    () async {
+      const oldModel = 'openai/gpt-oss-120b';
+      const newModel = 'qwen/qwen3.8-27b';
+      const otherEndpoint = 'https://example.org/v1/chat/completions';
+      for (final (url, old, expected) in [
+        (groqEndpoint, oldModel, newModel),
+        (groqEndpoint, 'mi-modelo', 'mi-modelo'),
+        (otherEndpoint, oldModel, oldModel),
+        (otherEndpoint, newModel, newModel),
+      ]) {
+        FlutterSecureStorage.setMockInitialValues({
+          configKey: jsonEncode({'url': url, 'model': old, 'key': 'mock-byok'}),
+        });
+        final config = (await Connection.read())!;
+        expect(config.url.toString(), url);
+        expect(config.model, expected);
+        expect(config.key, 'mock-byok');
+      }
+
+      await Connection(
+        checkedEndpoint(groqEndpoint),
+        oldModel,
+        'mock-choice',
+      ).store();
+      final stored = jsonDecode((await vault.read(key: configKey))!);
+      expect(stored['version'], 2);
+      final explicit = (await Connection.read())!;
+      expect(explicit.model, oldModel);
+      expect(explicit.key, 'mock-choice');
+    },
+  );
+  test(
     'Groq usa los parámetros acordados y el proveedor alternativo recibe solo el contrato común',
     () async {
       final cases = await BusinessCase.load();
@@ -71,8 +104,10 @@ void main() {
         'mock',
       );
       final payload = config.payload(c, 'Mi propuesta');
-      expect(payload['reasoning_effort'], 'medium');
-      expect(payload['max_completion_tokens'], 2048);
+      expect(payload['model'], 'qwen/qwen3.8-27b');
+      expect(payload['reasoning_effort'], 'high');
+      expect(payload['reasoning_format'], 'parsed');
+      expect(payload['max_completion_tokens'], 4096);
       expect(payload['stream'], true);
       final chat =
           config.payload(
@@ -88,15 +123,20 @@ void main() {
       expect(chat.first['content'], isNot(contains(c.decision)));
       expect(chat.last['content'], '¿Qué necesitas?');
       expect(chat.length, 4);
-      final other = Connection(
-        checkedEndpoint('https://example.org/v1/chat/completions'),
-        'modelo',
-        'mock',
-      );
-      expect(
-        other.payload(c, 'respuesta').containsKey('reasoning_effort'),
-        false,
-      );
+      for (final (endpoint, model) in [
+        ('https://example.org/v1/chat/completions', groqModel),
+        (groqEndpoint, 'mi-modelo'),
+      ]) {
+        final other = Connection(
+          checkedEndpoint(endpoint),
+          model,
+          'mock-other-key',
+        );
+        final custom = other.payload(c, 'respuesta');
+        expect(custom.keys, unorderedEquals(['model', 'messages', 'stream']));
+        expect(custom['model'], model);
+        expect(jsonEncode(custom), isNot(contains(other.key)));
+      }
       for (final endpoint in [
         'http://example.org/v1',
         'https://key@example.org/v1',

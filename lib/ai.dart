@@ -10,7 +10,7 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'cases.dart';
 
 const groqEndpoint = 'https://api.groq.com/openai/v1/chat/completions';
-const groqModel = 'openai/gpt-oss-120b';
+const groqModel = 'qwen/qwen3.8-27b';
 const vault = FlutterSecureStorage(
   iOptions: IOSOptions(
     accessibility: KeychainAccessibility.unlocked_this_device,
@@ -46,12 +46,23 @@ class Connection {
     final value = await vault.read(key: configKey);
     if (value == null) return null;
     final data = jsonDecode(value);
-    return Connection(checkedEndpoint(data['url']), data['model'], data['key']);
+    final url = checkedEndpoint(data['url']);
+    // Old settings stored the preset as a literal model ID.
+    final oldPreset =
+        data['version'] == null &&
+        url.toString() == groqEndpoint &&
+        data['model'] == 'openai/gpt-oss-120b';
+    return Connection(url, oldPreset ? groqModel : data['model'], data['key']);
   }
 
   Future<void> store() => vault.write(
     key: configKey,
-    value: jsonEncode({'url': url.toString(), 'model': model, 'key': key}),
+    value: jsonEncode({
+      'version': 2,
+      'url': url.toString(),
+      'model': model,
+      'key': key,
+    }),
   );
 
   Map<String, Object?> payload(
@@ -64,10 +75,10 @@ class Connection {
     'stream': true,
     if (url.toString() == groqEndpoint && model == groqModel) ...{
       'temperature': 1,
-      'top_p': 1,
-      'max_completion_tokens': 2048,
-      'reasoning_effort': 'medium',
-      'stop': null,
+      'top_p': 0.95,
+      'max_completion_tokens': 4096,
+      'reasoning_effort': 'high',
+      'reasoning_format': 'parsed',
     },
     'messages': interview != null
         ? [

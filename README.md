@@ -27,7 +27,7 @@ The library opens immediately. In Profile you can set an optional name and pract
 
 Download the Android APK from [GitHub Releases](https://github.com/msiciliag/casegen/releases). To run from source on Android or iOS, use `flutter pub get` and `flutter run`. Installing on a physical iPhone requires Apple signing.
 
-The cases and history work offline. Opening source links and requesting AI feedback require internet access. For feedback, the default is Groq's `openai/gpt-oss-120b`. You can also enter an HTTPS Chat Completions endpoint and model that support OpenAI-compatible streaming. Manage or remove your key in *Settings*; it is stored in the device's secure storage.
+The cases and history work offline. Opening source links and requesting AI feedback require internet access. Interviews and feedback use Groq’s Qwen 3.8 27B (`qwen/qwen3.8-27b`) with high reasoning effort by default. Groq lists this model in preview. You can change the model in Settings. You can also enter an HTTPS Chat Completions endpoint and model that support OpenAI-compatible streaming. Manage or remove your key in *Settings*; it is stored in the device's secure storage.
 
 ### Stack
 
